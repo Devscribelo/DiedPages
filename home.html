@@ -13,12 +13,12 @@
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-[#f8f8fb] group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e8e8f3] px-10 py-3">
+  <body class="bg-[#f8f8fb] font-sans">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+      <div class="flex flex-col grow">
+        <header class="flex items-center justify-between border-b border-solid border-b-[#e8e8f3] px-4 py-3 md:px-10">
           <div class="flex items-center gap-4 text-[#0e0e1b]">
-            <div class="size-4">
+            <div class="w-10 h-10">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"
@@ -26,17 +26,17 @@
                 ></path>
               </svg>
             </div>
-            <h2 class="text-[#0e0e1b] text-lg font-bold leading-tight tracking-[-0.015em]">Memorialize</h2>
+            <h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Memorialize</h2>
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#0e0e1b] text-sm font-medium leading-normal" href="#">Home</a>
-              <a class="text-[#0e0e1b] text-sm font-medium leading-normal" href="#">About</a>
-              <a class="text-[#0e0e1b] text-sm font-medium leading-normal" href="#">Gallery</a>
-              <a class="text-[#0e0e1b] text-sm font-medium leading-normal" href="#">Stories</a>
+          <div class="flex flex-1 justify-end gap-4 md:gap-8">
+            <div class="hidden md:flex items-center gap-4 md:gap-9">
+              <a class="text-sm font-medium leading-normal text-[#0e0e1b]" href="#">Home</a>
+              <a class="text-sm font-medium leading-normal text-[#0e0e1b]" href="#">About</a>
+              <a class="text-sm font-medium leading-normal text-[#0e0e1b]" href="#">Gallery</a>
+              <a class="text-sm font-medium leading-normal text-[#0e0e1b]" href="#">Stories</a>
             </div>
             <button
-              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#e8e8f3] text-[#0e0e1b] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              class="flex items-center justify-center h-10 max-w-[480px] px-2.5 text-sm font-bold leading-normal text-[#0e0e1b] bg-[#e8e8f3] rounded-full gap-2"
             >
               <div class="text-[#0e0e1b]" data-icon="Gear" data-size="20px" data-weight="regular">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
@@ -48,10 +48,10 @@
             </button>
           </div>
         </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="container mx-auto flex justify-center items-center">
-              <div class="rounded-full overflow-hidden" style="width: 200px; height: 200px;">
+        <div class="flex flex-1 justify-center py-5 px-4 md:px-40">
+          <div class="flex flex-col max-w-[960px] flex-1">
+            <div class="flex justify-center items-center mx-auto">
+              <div class="rounded-full overflow-hidden w-32 h-32 md:w-48 md:h-48">
                 <div
                   class="w-full h-full bg-center bg-no-repeat bg-cover"
                   style='background-image: url("https://cdn.usegalileo.ai/stability/f8200285-e2b5-474d-815b-a9752df34a07.png");'
@@ -59,15 +59,15 @@
               </div>
             </div>
 
-            <h1 class="text-[#0e0e1b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-center pb-3 pt-5">Ella Mae Johnson</h1>
-            <p class="text-[#505095] text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center">1928 - 2022</p>
-            <h2 class="text-[#0e0e1b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Biography</h2>
-            <p class="text-[#0e0e1b] text-base font-normal leading-normal pb-3 pt-1 px-4">
+            <h1 class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] text-center pb-3 pt-5">Ella Mae Johnson</h1>
+            <p class="text-[#505095] text-sm font-normal leading-normal text-center pb-3 pt-1">1928 - 2022</p>
+            <h2 class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Biography</h2>
+            <p class="text-[#0e0e1b] text-base font-normal leading-normal pb-3 pt-1">
               Ella Mae was born in Montgomery, Alabama in 1928. She was the first African American woman to work as a streetcar conductor in Montgomery. She married Robert Johnson
               and had 3 children. Ella Mae was an active member of her church and community. She was known for her kindness and generosity.
             </p>
-            <h2 class="text-[#0e0e1b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Gallery</h2>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+            <h2 class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 p-4">
               <div class="flex flex-col gap-3">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
@@ -91,6 +91,80 @@
                   class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                   style='background-image: url("https://cdn.usegalileo.ai/stability/af0f7027-0996-4ad6-87ce-6090d052b9db.png");'
                 ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/59c4407b-ebd8-4d3c-a927-f0c3f4a85460.png");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/b9ee62be-b0b1-4f8c-973e-d5df5ef8fdd2.png");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/968f0ee6-eda8-40f0-a246-5fc9eaeea122.png");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/af0f7027-0996-4ad6-87ce-6090d052b9db.png");'
+                ></div>
+              </div>
+            </div>
+            <h2 class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Spotify Playlist</h2>
+            <div class="flex justify-center items-center p-4">
+              <iframe
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M"
+                width="100%"
+                height="380"
+                frameborder="0"
+                allowtransparency="true"
+                allow="encrypted-media"
+              ></iframe>
+            </div>
+            <h2 class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Video Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 p-4">
+              <div class="flex flex-col gap-3">
+                <iframe
+                  class="w-full aspect-video rounded-xl"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="flex flex-col gap-3">
+                <iframe
+                  class="w-full aspect-video rounded-xl"
+                  src="https://www.youtube.com/embed/3JZ_D3ELwOQ"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="flex flex-col gap-3">
+                <iframe
+                  class="w-full aspect-video rounded-xl"
+                  src="https://www.youtube.com/embed/ZXsQAXx_ao0"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="flex flex-col gap-3">
+                <iframe
+                  class="w-full aspect-video rounded-xl"
+                  src="https://www.youtube.com/embed/lY2H2ZP56K4"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
