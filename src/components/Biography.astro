@@ -1,0 +1,46 @@
+---
+import { getEntry } from "astro:content"
+
+const biographia = await getEntry("biography", "biography")
+const { img, name, birthyear, deathyear, biography } = biographia.data
+---
+<div
+  class="flex justify-center items-center mx-auto relative profile-container"
+>
+  <div class="rounded-full overflow-hidden w-32 h-32 md:w-48 md:h-48">
+    <div
+      class="w-full h-full bg-center bg-no-repeat bg-cover"
+      style={img}
+    >
+    </div>
+  </div>
+  <img
+    src="/biography/dove.png"
+    alt="Dove"
+    class="absolute -top-4 -left-4 w-12"
+  />
+  <img
+    src="/biography/luto.png"
+    alt="Ribbon"
+    class="absolute -bottom-4 -right-4 w-12"
+  />
+</div>
+
+<h1
+  class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] text-center pb-3 pt-5"
+>
+    {name} &#128330;
+</h1>
+<p
+  class="text-[#505095] text-sm font-normal leading-normal text-center pb-3 pt-1"
+>
+  {birthyear} - {deathyear}
+</p>
+<h2
+  class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5"
+>
+  Biography
+</h2>
+<p class="text-[#0e0e1b] text-base font-normal leading-normal pb-3 pt-1">
+    {biography}
+</p>
