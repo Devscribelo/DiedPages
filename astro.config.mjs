@@ -7,5 +7,4 @@ export default defineConfig({
     enabled: false
   },
   integrations: [tailwind()],
-  output: "server"
 });
