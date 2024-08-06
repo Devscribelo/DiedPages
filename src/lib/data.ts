@@ -1,127 +1,127 @@
 export interface ImagesBiography {
-    name: string;
+    description: string;
     src: string;
 }
 
 export const bimages: ImagesBiography[] = [
     {
-        name: 'biography1',
+        description: '',
         src: '/biography/1.jpeg'
     },
     {
-        name: 'biography2',
+        description: '',
         src: '/biography/2.jpeg'
     },
     {
-        name: 'biography3',
+        description: '',
         src: '/biography/3.jpeg'
     },
     {
-        name: 'biography4',
+        description: '',
         src: '/biography/4.jpeg'
     },
     {
-        name: 'biography5',
+        description: '',
         src: '/biography/5.jpeg'
     },
     {
-        name: 'biography6',
+        description: '',
         src: '/biography/6.jpeg'
     },
     {
-        name: 'biography7',
+        description: '',
         src: '/biography/7.jpeg'
     },
     {
-        name: 'biography8',
+        description: '',
         src: '/biography/8.jpeg'
     }
 ]
 
 export interface ImagesGallery {
-    name: string;
+    description: string;
     src: string;
 }
 
 export const gimages: ImagesGallery[] = [
     {
-        name: 'gallery1',
+        description: '',
         src: '/gallery/1.jpg'
     },
     {
-        name: 'gallery2',
+        description: '',
         src: '/gallery/2.jpg'
     },
     {
-        name: 'gallery3',
+        description: '',
         src: '/gallery/3.jpg'
     },
     {
-        name: 'gallery4',
+        description: '',
         src: '/gallery/4.jpg'
     },
     {
-        name: 'gallery5',
+        description: '',
         src: '/gallery/5.jpg'
     },
     {
-        name: 'gallery6',
+        description: '',
         src: '/gallery/6.jpg'
     },
     {
-        name: 'gallery7',
+        description: '',
         src: '/gallery/7.jpg'
     },
     {
-        name: 'gallery8',
+        description: '',
         src: '/gallery/8.jpg'
     },
     {
-        name: 'gallery9',
+        description: '',
         src: '/gallery/9.jpg'
     },
     {
-        name: 'gallery10',
+        description: '',
         src: '/gallery/10.jpg'
     },
     {
-        name: 'gallery11',
+        description: '',
         src: '/gallery/11.jpg'
     },
     {
-        name: 'gallery12',
+        description: '',
         src: '/gallery/12.jpg'
     },
     {
-        name: 'gallery13',
+        description: '',
         src: '/gallery/13.jpg'
     },
     {
-        name: 'gallery14',
+        description: '',
         src: '/gallery/14.jpg'
     },
     {
-        name: 'gallery15',
+        description: '',
         src: '/gallery/15.jpg'
     },
     {
-        name: 'gallery16',
+        description: '',
         src: '/gallery/16.jpg'
     },
     {
-        name: 'gallery17',
+        description: '',
         src: '/gallery/17.jpg'
     },
     {
-        name: 'gallery18',
+        description: '',
         src: '/gallery/18.jpg'
     },
     {
-        name: 'gallery19',
+        description: '',
         src: '/gallery/19.jpg'
     },
     {
-        name: 'gallery20',
+        description: '',
         src: '/gallery/20.jpg'
     }
 ]

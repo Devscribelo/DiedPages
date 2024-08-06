@@ -1,20 +1,44 @@
 ---
-import type { ImagesBiography } from '@/lib/data'
+import type { ImagesBiography } from "@/lib/data";
 interface Props {
   image: ImagesBiography;
 }
 
 const { image } = Astro.props;
-const { name, src } = image;
+const { description, src } = image;
 ---
-<div
-  class="some-wrapper w-full bg-center aspect-square bg-no-repeat bg-cover rounded-xl cursor-pointer"
-  data-lightbox="true"
-  style={`background-image: url('${src}');`}
->
-  <img
-    class="w-full bg-center bg-no-repeat bg-cover rounded-xl cursor-pointer hidden"
-    src={`${src}`}
-    alt={name}
-  />
-</div>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+  </head>
+  <body>
+    <a
+      data-fancybox="gallery"
+      data-src={src}
+      data-caption={description}
+    >
+      <div class="flex flex-col gap-3">
+        <div
+          class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl cursor-pointer"
+          style={`background-image: url(${src});`}
+        >
+        </div>
+      </div>
+    </a>
+  </body>
+  <script type="module">
+    import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.esm.js";
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+      //
+    });
+  </script>
+</html>
