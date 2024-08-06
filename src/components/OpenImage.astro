@@ -1,0 +1,18 @@
+---
+interface Props {
+  img: string;
+}
+
+const { img } = Astro.props;
+---
+<div
+  class="some-wrapper w-full bg-center aspect-square bg-no-repeat bg-cover rounded-xl cursor-pointer"
+  data-lightbox="true"
+  style={`background-image: url('${img}');`}
+>
+  <img
+    class="w-full bg-center bg-no-repeat bg-cover rounded-xl cursor-pointer hidden"
+    src={`${img}`}
+    alt=""
+  />
+</div>

@@ -13,9 +13,8 @@ export function imgGallery(): string[] {
     let fileNames: string[] = [];
 
     for(let counter = 1; counter < 21; counter++) {
-        let fileName = `cristiano${counter}.jpg");'`;
-        let fileName1 = `background-image: url("/gallery/${fileName}`;
-        fileNames.push(fileName1);
+        let fileName = `/gallery/cristiano${counter}.jpg`;
+        fileNames.push(fileName);
     }
 
     return fileNames;

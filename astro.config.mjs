@@ -6,5 +6,6 @@ export default defineConfig({
   devToolbar: {
     enabled: false
   },
-  integrations: [tailwind()]
+  integrations: [tailwind()],
+  output: "server"
 });
