@@ -1,8 +1,6 @@
 ---
-import { findAvailableFiles } from "../utilities/typescript";
+import { bimages } from '@/lib/data'
 import OpenImage from "./OpenImage.astro";
-
-const availableFiles = findAvailableFiles();
 ---
 
 <h2
@@ -12,8 +10,6 @@ const availableFiles = findAvailableFiles();
 </h2>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 p-4">
   {
-    availableFiles.map((file) => (
-      <OpenImage img={file}/>
-    ))
+    bimages.map((bimage) => <OpenImage image={bimage}/>)
   }
 </div>

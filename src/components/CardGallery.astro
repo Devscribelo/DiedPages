@@ -1,17 +1,13 @@
 ---
-import { imgGallery } from '../utilities/typescript';
+import { gimages } from '@/lib/data'
 import OpenImage from './OpenImage.astro';
-const availableFiles  = imgGallery();
-const coverImage = availableFiles[0]; // Primera imagen es la portada oe kbros
 ---
 
 <h2 class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
-    Gallery</h2>
-<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-[4/2]" style={`background-image: url('${coverImage}');`}></div>
+    Galería</h2>
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-[4/2]" style={`background-image: url('/gallery/1.jpg');`}></div>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-3 p-4">
     {
-        availableFiles.slice(1).map((file) => (
-            <OpenImage img={file}/>
-        ))
+        gimages.map((gimage) => <OpenImage image={gimage}/>)
     }
 </div>

@@ -1,18 +1,20 @@
 ---
+import type { ImagesBiography } from '@/lib/data'
 interface Props {
-  img: string;
+  image: ImagesBiography;
 }
 
-const { img } = Astro.props;
+const { image } = Astro.props;
+const { name, src } = image;
 ---
 <div
   class="some-wrapper w-full bg-center aspect-square bg-no-repeat bg-cover rounded-xl cursor-pointer"
   data-lightbox="true"
-  style={`background-image: url('${img}');`}
+  style={`background-image: url('${src}');`}
 >
   <img
     class="w-full bg-center bg-no-repeat bg-cover rounded-xl cursor-pointer hidden"
-    src={`${img}`}
-    alt=""
+    src={`${src}`}
+    alt={name}
   />
 </div>
