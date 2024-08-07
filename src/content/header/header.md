@@ -1,7 +1,7 @@
 ---
 logo: '/logo.png'
 name: Memorialize
-link1: '/home'
+link1: '/inicio'
 namelink1: Inicio
 link2: '/galeria'
 namelink2: Fotos
