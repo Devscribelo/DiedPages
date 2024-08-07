@@ -19,22 +19,6 @@ export const bimages: ImagesBiography[] = [
     {
         description: '',
         src: '/biography/4.jpeg'
-    },
-    {
-        description: '',
-        src: '/biography/5.jpeg'
-    },
-    {
-        description: '',
-        src: '/biography/6.jpeg'
-    },
-    {
-        description: '',
-        src: '/biography/7.jpeg'
-    },
-    {
-        description: '',
-        src: '/biography/8.jpeg'
     }
 ]
 

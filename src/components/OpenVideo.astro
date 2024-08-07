@@ -8,35 +8,22 @@ const { video } = Astro.props;
 const { href, img } = video;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
-  </head>
-  <body>
-    <div>
-      <p>
-        <a href={href} data-fancybox="video-gallery"
-          ><img class="w-full aspect-video rounded-xl" alt="" src={img} /></a
-        >
-      </p>
-    </div>
+<div>
+  <p>
+    <a href={href} data-fancybox="video-gallery"
+      ><img class="w-full aspect-video rounded-xl" alt="" src={img} /></a
+    >
+  </p>
+</div>
 
-    <script type="module">
-      import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.esm.js";
-    
-      // Opciones personalizadas
-      const options = {
-        // Agrega aquí tus opciones personalizadas
-      };
-    
-      // Inicializa Fancybox
-      Fancybox.bind("[data-fancybox]", options);
-    </script>
-  </body>
-</html>
+<script type="module">
+  import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.esm.js";
+
+  // Opciones personalizadas
+  const options = {
+    // Agrega aquí tus opciones personalizadas
+  };
+
+  // Inicializa Fancybox
+  Fancybox.bind("[data-fancybox]", options);
+</script>
