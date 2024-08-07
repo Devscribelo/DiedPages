@@ -1,0 +1,46 @@
+---
+import type { BVideos } from "@/lib/data";
+interface Props {
+  video: BVideos;
+}
+
+const { video } = Astro.props;
+const { href, img } = video;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+  </head>
+  <body>
+    <div>
+      <p>
+        <a href={href} data-fancybox="video-gallery"
+          ><img class="w-full aspect-video rounded-xl" alt="" src={img} /></a
+        >
+      </p>
+    </div>
+
+    <script>
+      // Cargar el script de Fancybox dinámicamente
+      (function () {
+        var script = document.createElement("script");
+        script.src =
+          "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js";
+        script.onload = function () {
+          // Inicializar Fancybox después de que el script se haya cargado
+          Fancybox.bind("[data-fancybox]", {
+            // Opciones personalizadas
+          });
+        };
+        document.head.appendChild(script);
+      })();
+    </script>
+  </body>
+</html>
