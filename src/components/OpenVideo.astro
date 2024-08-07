@@ -27,20 +27,16 @@ const { href, img } = video;
       </p>
     </div>
 
-    <script>
-      // Cargar el script de Fancybox dinámicamente
-      (function () {
-        var script = document.createElement("script");
-        script.src =
-          "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js";
-        script.onload = function () {
-          // Inicializar Fancybox después de que el script se haya cargado
-          Fancybox.bind("[data-fancybox]", {
-            // Opciones personalizadas
-          });
-        };
-        document.head.appendChild(script);
-      })();
+    <script type="module">
+      import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.esm.js";
+    
+      // Opciones personalizadas
+      const options = {
+        // Agrega aquí tus opciones personalizadas
+      };
+    
+      // Inicializa Fancybox
+      Fancybox.bind("[data-fancybox]", options);
     </script>
   </body>
 </html>
