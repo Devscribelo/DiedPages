@@ -1,37 +1,20 @@
 ---
-import LayoutLogin from "@/layouts/LayoutLogin.astro"
-import CardLogin from "@/components/CardLogin.astro"
+import Layout from "@/layouts/Layout.astro";
+import Biography from "@/components/Biography.astro";
+import GallerySection from "@/components/GallerySection.astro";
+import Spotify from "@/components/Spotify.astro";
+import VideoGallerySection from "@/components/VideoGallerySection.astro";
 ---
-<LayoutLogin title="Login">
-	<main class="relative flex min-h-screen flex-col overflow-x-hidden">
-		<!-- Imagen de fondo con opacidad negra -->
-		<div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/imgLogin/paisajeDead.jpg');">
-			<div class="absolute inset-0 bg-black opacity-50"></div> <!-- Capa negra con opacidad -->
-		</div>
-		
-		<div class="relative flex flex-1 justify-center py-5 px-4 md:px-40 z-20">
-			<div class="flex items-center justify-center min-h-screen">
-				<div class="flex flex-col max-w-[960px] flex-1">
-					<CardLogin />
-				</div>
-			</div>
-		</div>
-	</main>
-	<script type="module">
-		// Verificar si el usuario está autenticado
-		if (localStorage.getItem("loggedIn") === "true") {
-		  window.location.href = "/inicio"; // Redirige al login si no está autenticado
-		}
-		document.getElementById("logoutButton").addEventListener("click", () => {
-		  localStorage.removeItem("loggedIn");
-		  window.location.href = "/"; // Redirige al login
-		});
-	  </script>
-</LayoutLogin>
 
-<style>
-	html,body{
-		overflow: hidden;
-		height: 100%;
-	}
-</style>
+<Layout title="[Nombre Difunto]">
+  <main class="relative flex min-h-screen flex-col overflow-x-hidden">
+    <div class="flex flex-1 justify-center py-5 px-4 md:px-40">
+      <div class="flex flex-col max-w-[960px] flex-1">
+        <Biography />
+        <GallerySection />
+        <Spotify />
+        <VideoGallerySection />
+      </div>
+    </div>
+  </main>
+</Layout>
