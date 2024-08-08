@@ -10,4 +10,14 @@ import Layout from '@/layouts/Layout.astro';
 			</div>
 		</div>
 	</main>
+	<script type="module">
+		// Verificar si el usuario está autenticado
+		if (localStorage.getItem("loggedIn") !== "true") {
+		  window.location.href = "/"; // Redirige al login si no está autenticado
+		}
+		document.getElementById("logoutButton").addEventListener("click", () => {
+		  localStorage.removeItem("loggedIn");
+		  window.location.href = "/"; // Redirige al login
+		});
+	  </script>
 </Layout>
