@@ -1,6 +1,5 @@
 ---
-logo: '/logo.png'
-name: Memorialize
+logo: '/logore.svg'
 link1: '/'
 namelink1: Inicio
 link2: '/galeria'
