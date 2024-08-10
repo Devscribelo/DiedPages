@@ -1,5 +1,5 @@
 ---
-img: 'background-image: url("https://i.ibb.co/RPSPcMg/2a40b8d8-7165-43f5-98ac-62ee4bce17cc.jpg");'
+img: 'background-image: url("/biography/6.jpeg");'
 name: Ella Mae Johnson
 birthyear: 1928
 deathyear: 2022
