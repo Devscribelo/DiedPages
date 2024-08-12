@@ -7,22 +7,17 @@ const { img, name, birthyear, deathyear, biography } = biographia.data
 <div
   class="flex justify-center items-center mx-auto relative profile-container"
 >
-  <div class="rounded-full overflow-hidden w-32 h-32 md:w-48 md:h-48">
+  <div class="border-4 border-[#a8955e] rounded-full overflow-hidden w-32 h-32 md:w-48 md:h-48">
     <div
-      class="w-full h-full bg-center bg-no-repeat bg-cover"
+      class="w-full h-full bg-center bg-no-repeat bg-cover "
       style={img}
     >
     </div>
   </div>
-  <img
-    src="/biography/luto.png"
-    alt="Ribbon"
-    class="absolute -bottom-4 -right-4 w-12"
-  />
 </div>
 
 <h1
-  class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] text-center pb-3 pt-5"
+  class="font-dancingScript text-[#0e0e1b] text-2xl md:text-[28px] font-bold leading-tight tracking-[-0.015em] text-center pb-3 pt-5"
 >
     {name}
 </h1>
@@ -36,7 +31,7 @@ const { img, name, birthyear, deathyear, biography } = biographia.data
 <h2
   class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 mx-auto"
 >
-  Biografía
+  BIOGRAFÍA
 </h2>
 <p class="text-[#0e0e1b] text-base font-normal leading-normal pb-3 pt-1">
     {biography}

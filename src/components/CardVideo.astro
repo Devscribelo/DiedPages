@@ -3,12 +3,11 @@ import OpenVideo from "./OpenVideo.astro";
 import { gvideos } from "@/lib/data";
 ---
 
-<h2 class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Video
-    Gallery</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 p-4">
-    {
-      gvideos.map((gvideo) => (
-        <OpenVideo video={gvideo}/>
-      ))
-    }
-  </div>
+<h2
+  class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 mx-auto"
+>
+  ÁLBUM DE VIDEOS
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 p-4">
+  {gvideos.map((gvideo) => <OpenVideo video={gvideo} />)}
+</div>

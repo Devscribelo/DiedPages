@@ -1,13 +1,14 @@
 ---
-import { gimages } from '@/lib/data'
-import OpenImage from './OpenImage.astro';
+import { gimages } from "@/lib/data";
+import OpenImage from "./OpenImage.astro";
 ---
 
-<h2 class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
-    Galería</h2>
-<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-[4/2]" style={`background-image: url('/gallery/1.jpg');`}></div>
+<h2
+  class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5 pt-5 mx-auto"
+>
+  ÁLBUM DE FOTOS
+</h2>
+</div>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-3 p-4">
-    {
-        gimages.map((gimage) => <OpenImage image={gimage}/>)
-    }
+  {gimages.map((gimage) => <OpenImage image={gimage} />)}
 </div>

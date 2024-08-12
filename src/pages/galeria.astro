@@ -1,14 +1,16 @@
 ---
-import CardGallery from '@/components/CardGallery.astro';
-import Layout from '@/layouts/Layout.astro';
+import CardGallery from "@/components/CardGallery.astro";
+import Layout from "@/layouts/Layout.astro";
+import PortadaGallery from "@/components/PortadaGallery.astro";
 ---
 
 <Layout title="Galería">
-	<main class="relative flex min-h-screen flex-col overflow-x-hidden">
-		<div class="flex flex-1 justify-center py-5 px-4 md:px-40">
-			<div class="flex flex-col max-w-[960px] flex-1">
-				<CardGallery/>
-			</div>
-		</div>
-	</main>
+  <main class="relative flex min-h-screen flex-col overflow-x-hidden">
+    <PortadaGallery/>
+    <div class="flex flex-1 justify-center py-5 px-4 md:px-40">
+      <div class="flex flex-col max-w-[960px] flex-1">
+        <CardGallery />
+      </div>
+    </div>
+  </main>
 </Layout>

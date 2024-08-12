@@ -1,18 +1,6 @@
 ---
-import { getEntry } from "astro:content";
-const header = await getEntry("header", "header");
-const {
-  logo,
-  name,
-  link1,
-  namelink1,
-  link2,
-  namelink2,
-  link3,
-  namelink3,
-  link4,
-  namelink4,
-} = header.data;
+import { linksHeader } from "@/lib/headerData";
+import { logo, name } from "@/lib/data"
 ---
 
 <header
@@ -33,22 +21,13 @@ const {
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex flex-1 justify-end gap-4 md:gap-4">
-      <a
-        class="text-sm font-medium leading-normal text-[#a8955e] hover:text-[#d4b577] transition-colors duration-300 p-2"
-        href={link1}>{namelink1}</a
-      >
-      <a
-        class="text-sm font-medium leading-normal text-[#a8955e] hover:text-[#d4b577] transition-colors duration-300 p-2"
-        href={link2}>{namelink2}</a
-      >
-      <a
-        class="text-sm font-medium leading-normal text-[#a8955e] hover:text-[#d4b577] transition-colors duration-300 p-2"
-        href={link3}>{namelink3}</a
-      >
-      <a
-        class="text-sm font-medium leading-normal text-[#a8955e] hover:text-[#d4b577] transition-colors duration-300 p-2"
-        href={link4}>{namelink4}</a
-      >
+      {
+        linksHeader.map((linkHeader) =>
+          <a
+          class="text-sm font-medium leading-normal text-[#a8955e] hover:text-[#d4b577] transition-colors duration-300 p-2"
+          href={linkHeader.link}>{linkHeader.namelink}</a>
+        )
+      }
     </nav>
   </div>
   <!-- Menu Toggle for Mobile -->
@@ -98,22 +77,13 @@ const {
     id="mobile-menu"
   >
     <div class="flex flex-col space-y-4 w-full">
-      <a
-        class="text-xl text-[#a8955e] hover:text-blue-600 transition-colors duration-200 border-b border-gray-300 pb-2"
-        href={link1}>{namelink1}</a
-      >
-      <a
-        class="text-xl text-[#a8955e] hover:text-blue-600 transition-colors duration-200 border-b border-gray-300 pb-2"
-        href={link2}>{namelink2}</a
-      >
-      <a
-        class="text-xl text-[#a8955e] hover:text-blue-600 transition-colors duration-200 border-b border-gray-300 pb-2"
-        href={link3}>{namelink3}</a
-      >
-      <a
-        class="text-xl text-[#a8955e] hover:text-blue-600 transition-colors duration-200 border-b border-gray-300 pb-2"
-        href={link4}>{namelink4}</a
-      >
+      {
+        linksHeader.map((linkHeader) =>
+          <a
+          class="text-xl text-[#a8955e] hover:text-[#d4b577] transition-colors duration-300 border-b border-gray-300 pb-2"
+          href={linkHeader.link}>{linkHeader.namelink}</a>
+        )
+      }
     </div>
   </div>
 </header>

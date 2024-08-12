@@ -1,3 +1,6 @@
+export const logo: string = '/logore.svg'
+export const name: string = 'Juan Gabriel León Carpio'
+
 export interface ImagesBiography {
     description: string;
     src: string;
