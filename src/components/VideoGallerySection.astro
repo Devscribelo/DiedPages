@@ -3,7 +3,7 @@ import OpenVideo from "./OpenVideo.astro";
 import { bvideos } from '@/lib/data'
 ---
 
-<h2 class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 mx-auto">ÁLBUM DE VIDEOS</h2>
+<h2 class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 mx-auto mt-5">ÁLBUM DE VIDEOS</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-3 p-4">
     {
       bvideos.map((bvideo) => (
@@ -11,3 +11,12 @@ import { bvideos } from '@/lib/data'
       ))
     }
   </div>
+
+  <a href="/videos">
+    <button
+      class="justify-center mx-auto bg-[#0e0e1b] text-white hover:text-[#0e0e1b] font-bold py-3 px-7 rounded-full flex items-center gap-2 transition-colors duration-200 hover:bg-[#d4b577]">
+      Ver más Videos
+      <div class="flex justify-center items-center">
+      </div>
+    </button>
+  </a>
