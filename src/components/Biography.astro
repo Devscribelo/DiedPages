@@ -2,7 +2,7 @@
 import { getEntry } from "astro:content"
 
 const biographia = await getEntry("biography", "biography")
-const { img, name, birthyear, deathyear, biography } = biographia.data
+const { img, name, birthyear, deathyear, biography, footer } = biographia.data
 ---
 <div
   class="flex justify-center items-center mx-auto relative profile-container"
@@ -35,4 +35,8 @@ const { img, name, birthyear, deathyear, biography } = biographia.data
 </h2>
 <p class="text-[#0e0e1b] text-base font-normal leading-normal pb-3 pt-1">
     {biography}
+</p>
+
+<p class="font-dancingScript mx-auto text-[#0e0e1b] text-xl font-bold leading-normal pb-3 pt-1">
+ "{footer}"
 </p>
