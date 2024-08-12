@@ -21,6 +21,7 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.14",
     "sass": "^1.77.8"
   }
 }
