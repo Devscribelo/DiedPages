@@ -1,11 +1,11 @@
 ---
 import CardVideo from '@/components/CardVideo.astro';
-import PortadaVideos from '@/components/PortadaVideos.astro';
+import Portada from "@/components/Portada.astro";
 import Layout from '@/layouts/Layout.astro';
 ---
 <Layout title="Videos">
 	<main class="relative flex min-h-screen flex-col overflow-x-hidden">
-		<PortadaVideos/>
+		<Portada fraseGrande='"Revive Cada Momento, Disfruta Cada Video."' frasePequena='"Cada video es una explosión de vida y emoción. Sumérgete en historias visuales que transforman momentos ordinarios en recuerdos extraordinarios."' img='/public/portada/video.gif'/>
 		<div class="flex flex-1 justify-center py-5 px-4 md:px-40">
 			<div class="flex flex-col max-w-[960px] flex-1">
 				<CardVideo/>

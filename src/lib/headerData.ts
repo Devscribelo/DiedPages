@@ -17,7 +17,7 @@ export const linksHeader: LinksHeader[] = [
         namelink: 'VIDEOS',
     },
     {
-        link: '/#',
+        link: '/mensajes',
         namelink: 'MENSAJES',
     },
 ]

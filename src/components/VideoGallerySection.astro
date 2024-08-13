@@ -1,5 +1,6 @@
 ---
 import OpenVideo from "./OpenVideo.astro";
+import ButtonVerMas from "./ButtonVerMas.astro";
 import { bvideos } from '@/lib/data'
 ---
 
@@ -12,11 +13,4 @@ import { bvideos } from '@/lib/data'
     }
   </div>
 
-  <a href="/videos">
-    <button
-      class="justify-center mx-auto bg-[#0e0e1b] text-white hover:text-[#0e0e1b] font-bold py-3 px-7 rounded-full flex items-center gap-2 transition-colors duration-200 hover:bg-[#d4b577]">
-      Ver más Videos
-      <div class="flex justify-center items-center">
-      </div>
-    </button>
-  </a>
+<ButtonVerMas href='/videos' text="VER MÁS VIDEOS"/>
