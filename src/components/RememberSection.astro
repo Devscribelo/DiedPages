@@ -151,4 +151,15 @@ import ButtonVerMas from "./ButtonVerMas.astro";
   .carrousel #radio-4:checked ~ .itemsNavigation label#dotForRadio-4 {
     background: #a8955e;
   }
+
 </style>
+
+<script type="module">
+  let currentIndex = 1;
+  const totalItems = 3; // Cambia este valor si tienes más radios
+
+  setInterval(() => {
+    document.getElementById(`radio-${currentIndex}`).checked = true;
+    currentIndex = currentIndex === totalItems ? 1 : currentIndex + 1;
+  }, 4000); // Cambia cada 4 segundos
+</script>

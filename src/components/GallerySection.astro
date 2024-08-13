@@ -1,18 +1,17 @@
 ---
 import { bimages } from '@/lib/data'
 import OpenImage from "./OpenImage.astro";
-import ButtonVerMas from './ButtonVerMas.astro';
 ---
 
 <h2
   class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 mx-auto"
 >
-  ÁLBUM DE FOTOS
+  Galería de Fotos
 </h2>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 p-4">
-  {
-    bimages.map((bimage) => <OpenImage image={bimage}/>)
-  }
+  {bimages.map((bimage) => (
+    <OpenImage image={bimage} />
+  ))}
+  
 </div>
 
-<ButtonVerMas href='/galeria' text='VER MÁS FOTOS'/>
