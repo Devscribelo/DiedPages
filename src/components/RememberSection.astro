@@ -3,163 +3,198 @@ import { mensajes } from "@/lib/data";
 import ButtonVerMas from "./ButtonVerMas.astro";
 ---
 
-<h2
-  class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 mx-auto text-center"
->
+
+<h2 class="text-[#0e0e1b] text-2xl md:text-3xl font-bold leading-tight tracking-tight pb-6 pt-8 mx-auto text-center">
   MENSAJES DE RECUERDO
 </h2>
 
-<div class="max-w-2xl mx-auto overflow-hidden flex flex-col">
-  <div class="carrousel">
-    <input type="radio" name="items" id="radio-1" checked />
-    <input type="radio" name="items" id="radio-2" />
-    <input type="radio" name="items" id="radio-3" />
-    <ul class="items">
-      {
-        mensajes.slice(0, 3).map((mensaje) => (
-          <li>
-            <div class="item">
-              <div class="flex flex-col md:flex-row my-3">
-                <div class="flex-shrink-0 w-full md:w-1/3 flex flex-col justify-center items-center p-4 bg-[#0e0e1b] border-b md:border-b-0 md:border-r border-black rounded-tl-lg rounded-bl-lg">
-                  <div class="rounded-full overflow-hidden w-32 h-32 md:w-48 md:h-48 mb-4">
-                    <div
-                      class="w-full h-full bg-center bg-no-repeat bg-cover"
-                      style={mensaje.img}
-                    />
-                  </div>
-                  <h1 class="font-dancingScript text-[#a8955e] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em]">
-                    {mensaje.name}
-                  </h1>
-                </div>
-                <div class="hidden md:block w-px bg-gray-300" />
-                <div class="flex-1 p-6 flex flex-col justify-center bg-[#0e0e1b] rounded-tr-lg rounded-br-lg">
-                  <h2 class="text-[#a8955e] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3">
-                    Mensaje
-                  </h2>
-                  <p class="text-[#ffffff] text-base font-normal leading-normal">
-                    {mensaje.remember}
-                  </p>
-                </div>
+<div class="w-full max-w-3xl mx-auto px-4">
+  <div class="carousel">
+    <div class="carousel-inner">
+      {mensajes.slice(0, 3).map((mensaje, index) => (
+        <div class="carousel-item" id={`item-${index + 1}`}>
+          <div class="flex flex-col md:flex-row bg-[#0e0e1b] rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 w-full md:w-2/5 flex flex-col justify-center items-center p-4 md:p-6 border-b md:border-b-0 md:border-r border-[#a8955e]">
+              <div class="rounded-full overflow-hidden w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 mb-4 border-4 border-[#a8955e]">
+                <div
+                  class="w-full h-full bg-center bg-no-repeat bg-cover"
+                  style={mensaje.img}
+                />
               </div>
+              <h3 class="font-dancingScript text-[#a8955e] text-lg md:text-xl lg:text-2xl font-bold leading-tight text-center">
+                {mensaje.name}
+              </h3>
             </div>
-          </li>
-        ))
-      }
-    </ul>
-    <div class="itemsNavigation">
-      <label for="radio-1" id="dotForRadio-1"></label>
-      <label for="radio-2" id="dotForRadio-2"></label>
-      <label for="radio-3" id="dotForRadio-3"></label>
+            <div class="flex-1 p-4 md:p-6 flex flex-col justify-center">
+              <h4 class="text-[#a8955e] text-base md:text-lg lg:text-xl font-bold leading-tight tracking-tight pb-2 md:pb-3">
+                Mensaje
+              </h4>
+              <p class="text-white text-xs md:text-sm lg:text-base font-normal leading-relaxed">
+                {mensaje.remember}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
-    <div class="mt-4">
-      <ButtonVerMas href='/mensajes' text="VER MÁS MENSAJES" />
+    <div class="carousel-nav">
+      <button class="prev" aria-label="Slide anterior">&#10094;</button>
+      <div class="dots">
+        {mensajes.slice(0, 3).map((_, index) => (
+          <button class="dot" data-index={index} aria-label={`Ir al slide ${index + 1}`}></button>
+        ))}
+      </div>
+      <button class="next" aria-label="Siguiente slide">&#10095;</button>
     </div>
+  </div>
+  <div class="mt-8 text-center">
+    <ButtonVerMas href='/mensajes' text="VER MÁS MENSAJES" />
   </div>
 </div>
 
 <style>
-  .carrousel {
+  .carousel {
+    position: relative;
+    width: 100%;
     overflow: hidden;
+  }
+
+  .carousel-inner {
     position: relative;
-    text-align: center;
-    padding: 1em 0;
-    max-width: 750px;
-    margin: auto;
+    width: 100%;
   }
 
-  .carrousel .items {
-    width: 400%;
-    overflow: hidden;
-    list-style: none;
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    visibility: hidden;
+  }
+
+  .carousel-item.active {
+    opacity: 1;
+    visibility: visible;
     position: relative;
-
-    -webkit-transition: transform 0.5s;
-    -moz-transition: transform 0.5s;
-    -o-transition: transform 0.5s;
-    transition: transform 0.5s;
   }
 
-  .carrousel .items li {
-    width: 25%;
+  .carousel-nav {
     position: relative;
-    float: left;
-  }
-
-  .carrousel li div {
-    color: #666666;
-    font-size: 1.3em;
-    font-weight: bold;
-  }
-
-  .carrousel li img {
-    max-width: 100%;
-    object-fit: cover;
-    vertical-align: middle;
-  }
-
-  .carrousel li div.item {
-    color: #777777;
-    display: block;
-  }
-
-  .carrousel .itemsNavigation {
     display: flex;
     justify-content: center;
-    list-style: none;
-    text-align: center;
+    align-items: center;
+    margin-top: 1rem;
   }
 
-  .carrousel input {
-    display: none;
+  .prev, .next {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #a8955e;
+    cursor: pointer;
+    padding: 0 1rem;
   }
 
-  .carrousel .itemsNavigation label {
-    float: left;
-    margin: 6px;
-    display: block;
-    height: 10px;
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dot {
     width: 10px;
-    -webkit-border-radius: 50%;
+    height: 10px;
     border-radius: 50%;
-    border: solid 2px #a8955e;
-    font-size: 0;
-  }
-
-  #radio-1:checked ~ .items {
-    transform: translateX(0%);
-  }
-
-  #radio-2:checked ~ .items {
-    transform: translateX(-25%);
-  }
-
-  #radio-3:checked ~ .items {
-    transform: translateX(-50%);
-  }
-
-  #radio-4:checked ~ .items {
-    transform: translateX(-75%);
-  }
-
-  .carrousel .itemsNavigation label:hover {
+    background-color: #ccc;
+    margin: 0 5px;
+    border: none;
     cursor: pointer;
   }
 
-  .carrousel #radio-1:checked ~ .itemsNavigation label#dotForRadio-1,
-  .carrousel #radio-2:checked ~ .itemsNavigation label#dotForRadio-2,
-  .carrousel #radio-3:checked ~ .itemsNavigation label#dotForRadio-3,
-  .carrousel #radio-4:checked ~ .itemsNavigation label#dotForRadio-4 {
-    background: #a8955e;
+  .dot.active {
+    background-color: #a8955e;
   }
-
 </style>
 
-<script type="module">
-  let currentIndex = 1;
-  const totalItems = 3; // Cambia este valor si tienes más radios
+<script>
+  function initCarousel() {
+    const carouselInner = document.querySelector('.carousel-inner');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dots = document.querySelectorAll('.dot');
+    
+    let currentIndex = 0;
+    const totalItems = items.length;
 
-  setInterval(() => {
-    document.getElementById(`radio-${currentIndex}`).checked = true;
-    currentIndex = currentIndex === totalItems ? 1 : currentIndex + 1;
-  }, 4000); // Cambia cada 4 segundos
+    function updateCarouselHeight() {
+      const activeItem = document.querySelector('.carousel-item.active');
+      if (activeItem) {
+        if (carouselInner && activeItem instanceof HTMLElement) {
+          (carouselInner as HTMLElement).style.height = `${activeItem.offsetHeight}px`;
+        }
+      }
+    }
+
+    function updateCarousel() {
+      items.forEach((item, index) => {
+        item.classList.toggle('active', index === currentIndex);
+      });
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+      updateCarouselHeight();
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalItems;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      updateCarousel();
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', nextSlide);
+    }
+    if (prevBtn) {
+      prevBtn.addEventListener('click', prevSlide);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+      });
+    });
+
+    // Avance automático del carrusel
+    let intervalId = setInterval(nextSlide, 5000);
+
+    // Pausar el avance automático en interacción del usuario
+    const carousel = document.querySelector('.carousel');
+    if (carousel) {
+      carousel.addEventListener('mouseenter', () => clearInterval(intervalId));
+      carousel.addEventListener('mouseleave', () => {
+        clearInterval(intervalId);
+        intervalId = setInterval(nextSlide, 5000);
+      });
+    }
+
+    // Actualización inicial
+    updateCarousel();
+
+    // Ajustar altura en cambio de tamaño de ventana
+    window.addEventListener('resize', updateCarouselHeight);
+  }
+
+  // Ejecutar la inicialización cuando el DOM esté listo
+  document.addEventListener('DOMContentLoaded', initCarousel);
+
+  // Para Astro: También ejecutar cuando se navega entre páginas
+  document.addEventListener('astro:page-load', initCarousel);
 </script>
