@@ -3,35 +3,257 @@ import { mensajes } from "@/lib/data"
 ---
 
 <h2
-  class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 mx-auto text-center"
+  class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5 pt-5 mx-auto text-center"
 >
   MENSAJES DE RECUERDO
 </h2>
 
 <div class="max-w-2xl mx-auto overflow-hidden flex flex-col">
-  {mensajes.map((mensaje) => (
-    <div class="flex flex-col md:flex-row my-3">
-      <div class="flex-shrink-0 w-full md:w-1/3 flex flex-col justify-center items-center p-4 bg-[#0e0e1b] border-b md:border-b-0 md:border-r border-black rounded-tl-lg rounded-bl-lg">
-        <div class="rounded-full overflow-hidden w-32 h-32 md:w-48 md:h-48 mb-4">
-          <div
-            class="w-full h-full bg-center bg-no-repeat bg-cover"
-            style={ mensaje.img }
-          >
-          </div>
+  <div class="container">
+  {mensajes.map((mensaje, index) => (
+    <div class="item">
+        <button class="button" id={`openModalButton-${index}`} data-index={index}>
+            <img src={mensaje.img} alt="Book Cover" style="width: 50px; height: 50px; border-radius: 4px;"/>
+            <div class="mx-auto">
+                <h3 style="margin: 0; font-size: 14px; font-weight: medium; color: black;">{mensaje.titulo}</h3>
+                <p style="margin: 0; font-size: 12px; color: gray;">{mensaje.name}</p>
+            </div>
+        </button>
+    </div>
+    <div class="modal-overlay" id={`modalOverlay-${index}`} data-index={index}>
+        <div class="modal" id={`modal-${index}`}>
+            <div class="modal-content">
+                <div class="modal-image-container">
+                    <img src={mensaje.img} alt="Book Cover"/>
+                </div>
+                <h2 style="color: black;">{mensaje.titulo}</h2>
+                <p style="color: gray; font-weight: light;">{mensaje.name}</p>
+                <div style="margin-top: 20px; color: #4A5568;">
+                    <p>{mensaje.remember}</p>
+                </div>
+            </div>
+            <button style="color:#a8955e" class="close-button" id={`closeModalButton-${index}`}>Cerrar</button>
         </div>
-        <h1 class="font-dancingScript text-[#a8955e] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em]">
-          {mensaje.name}
-        </h1>
-      </div>
-      <div class="hidden md:block w-px bg-gray-300"></div>
-      <div class="flex-1 p-6 flex flex-col justify-center bg-[#0e0e1b] rounded-tr-lg rounded-br-lg">
-        <h2 class="text-[#a8955e] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3">
-          Mensaje
-        </h2>
-        <p class="text-[#ffffff] text-base font-normal leading-normal">
-          {mensaje.remember}
-        </p>
-      </div>
     </div>
   ))}
+  </div>
 </div>
+
+<style>
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    align-items: center;
+    gap: 16px; /* Espacio entre los elementos */
+  }
+  
+  .item {
+    width: 300px; /* Ancho predeterminado para los botones */
+    box-sizing: border-box;
+  }
+  
+    .button {
+      border-radius: 4px;
+      border: 1px solid rgba(156, 163, 175, 0.6);
+      background-color: #fff;
+      padding: 8px 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+    }
+  
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+    }
+  
+    .modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .modal {
+      position: fixed;
+      background-color: #fff;
+      border-radius: 12px;
+      border: 1px solid rgba(156, 163, 175, 0.2);
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      max-height: 80vh;
+      width: 90%;
+      max-width: 400px;
+      transition: all 0.3s ease;
+      opacity: 0;
+      overflow: hidden;
+    }
+  
+    .modal.open {
+      opacity: 1;
+    }
+  
+    .modal-content {
+      overflow-y: auto;
+      padding-right: 10px;
+      margin-right: -10px;
+      flex-grow: 1;
+    }
+  
+    .modal-image-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  
+    .modal img {
+      width: 300px;
+      border-radius: 8px;
+    }
+  
+    .close-button {
+      margin-top: 15px;
+      background-color: #0e0e1b;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  
+    /* Estilos para la barra de desplazamiento */
+    .modal-content::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    .modal-content::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+  
+    .modal-content::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+  
+    .modal-content::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  
+    @media (max-width: 700px) {
+      .modal {
+        max-width: none;
+        max-height: 90vh;
+      }
+    }
+  </style>
+  <script type="module">
+    function openModal(index) {
+      const openModalButton = document.getElementById(`openModalButton-${index}`);
+      const closeModalButton = document.getElementById(`closeModalButton-${index}`);
+      const modalOverlay = document.getElementById(`modalOverlay-${index}`);
+      const modal = document.getElementById(`modal-${index}`);
+  
+      function getCardRect() {
+        return openModalButton.getBoundingClientRect();
+      }
+  
+      function setModalPosition(rect) {
+        modal.style.top = `${rect.top}px`;
+        modal.style.left = `${rect.left}px`;
+        modal.style.width = `${rect.width}px`;
+        modal.style.height = `${rect.height}px`;
+      }
+  
+      function getModalEndRect() {
+        const width = Math.min(400, window.innerWidth * 0.9);
+        return {
+          top: Math.max(20, (window.innerHeight - 500) / 2),
+          left: (window.innerWidth - width) / 2,
+          width: width,
+          height: Math.min(500, window.innerHeight * 0.8)
+        };
+      }
+  
+      function animateModal(start, end, isOpening) {
+        setModalPosition(start);
+        modal.style.transition = 'none';
+        modal.style.opacity = isOpening ? '0' : '1';
+        
+        requestAnimationFrame(() => {
+          modal.style.transition = 'all 0.3s ease';
+          modal.style.top = `${end.top}px`;
+          modal.style.left = `${end.left}px`;
+          modal.style.width = `${end.width}px`;
+          modal.style.height = `${end.height}px`;
+          modal.style.opacity = isOpening ? '1' : '0';
+        });
+      }
+  
+      const startRect = getCardRect();
+      const endRect = getModalEndRect();
+  
+      modalOverlay.classList.add('open');
+      modal.style.display = 'flex';
+      animateModal(startRect, endRect, true);
+      
+      setTimeout(() => {
+        modal.classList.add('open');
+      }, 50);
+  
+      closeModalButton.addEventListener('click', closeModal);
+      modalOverlay.addEventListener('click', closeModal);
+  
+      function closeModal() {
+        const startRect = {
+          top: parseInt(modal.style.top),
+          left: parseInt(modal.style.left),
+          width: parseInt(modal.style.width),
+          height: parseInt(modal.style.height)
+        };
+        const endRect = getCardRect();
+  
+        modal.classList.remove('open');
+        animateModal(startRect, endRect, false);
+        
+        setTimeout(() => {
+          modalOverlay.classList.remove('open');
+          modal.style.display = 'none';
+        }, 300);
+      }
+  
+      modal.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+  
+      window.addEventListener('resize', () => {
+        if (modalOverlay.classList.contains('open')) {
+          const endRect = getModalEndRect();
+          setModalPosition(endRect);
+        }
+      });
+    }
+  
+    document.querySelectorAll('[id^="openModalButton"]').forEach(button => {
+      button.addEventListener('click', () => {
+        const index = button.getAttribute('data-index');
+        openModal(index);
+      });
+    });
+  </script>
+  

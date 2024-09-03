@@ -181,22 +181,26 @@ export interface Mensajes{
     img: string;
     name: string;
     remember: string;
+    titulo: string;
 }
 
 export const mensajes: Mensajes[] = [
     {
-        img: 'background-image: url("https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg");',
+        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
         name: 'Canicas',
-        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.'
+        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.',
+        titulo: 'Recuerdo especial 1'
     },
     {
-        img: 'background-image: url("https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg");',
+        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
         name: 'Canicas',
-        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.'
+        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.',
+        titulo: 'Recuerdo especial 2'
     },
     {
-        img: 'background-image: url("https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg");',
+        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
         name: 'Canicas',
-        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.'
+        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.',
+        titulo: 'Recuerdo especial 3333'
     },
 ]
