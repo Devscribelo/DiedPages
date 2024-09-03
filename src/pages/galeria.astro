@@ -14,3 +14,88 @@ import Portada from "@/components/Portada.astro";
     </div>
   </main>
 </Layout>
+
+<script type="module">
+  function determineImageOrientation(img) {
+    return new Promise((resolve) => {
+      if (img.complete) {
+        resolve(
+          img.naturalWidth > img.naturalHeight ? "horizontal" : "vertical"
+        );
+      } else {
+        img.onload = () =>
+          resolve(
+            img.naturalWidth > img.naturalHeight ? "horizontal" : "vertical"
+          );
+      }
+    });
+  }
+
+  async function resizeGridItem(item) {
+    const grid = document.querySelector(".gallery-grid");
+    const rowHeight = parseInt(
+      window.getComputedStyle(grid).getPropertyValue("grid-auto-rows")
+    );
+    const rowGap = parseInt(
+      window.getComputedStyle(grid).getPropertyValue("grid-row-gap")
+    );
+    const img = item.querySelector("img");
+    const orientation = await determineImageOrientation(img);
+
+    let contentHeight;
+    if (orientation === "vertical") {
+      contentHeight =
+        img.naturalHeight * (item.offsetWidth / img.naturalWidth) * 1.5;
+    } else {
+      contentHeight = img.naturalHeight * (item.offsetWidth / img.naturalWidth);
+    }
+
+    const rowSpan = Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap));
+    item.style.gridRowEnd = `span ${rowSpan}`;
+  }
+
+  async function resizeAllGridItems() {
+    const allItems = document.getElementsByClassName("grid-item");
+    for (let x = 0; x < allItems.length; x++) {
+      await resizeGridItem(allItems[x]);
+    }
+  }
+
+  let resizeTimeout;
+  let checkInterval;
+
+  function scheduleResize() {
+    clearTimeout(resizeTimeout);
+    clearInterval(checkInterval);
+
+    resizeTimeout = setTimeout(() => {
+      resizeAllGridItems();
+
+      // Set up periodic checks
+      checkInterval = setInterval(() => {
+        if (document.visibilityState === "visible") {
+          resizeAllGridItems();
+        }
+      }, 1000); // Check every second when the tab is visible
+    }, 100);
+  }
+
+  function initializeGallery() {
+    scheduleResize();
+    window.addEventListener("resize", scheduleResize);
+  }
+
+  // Run on initial load
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializeGallery);
+  } else {
+    initializeGallery();
+  }
+
+  // Run when the page becomes visible
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible") {
+      scheduleResize();
+    }
+  });
+</script>

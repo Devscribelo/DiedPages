@@ -3,13 +3,13 @@ import { images } from "@/lib/data";
 import OpenImage from "./OpenImage.astro";
 ---
 
-<h2 class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5 pt-5 mx-auto">
+<h2
+  class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5 pt-5 mx-auto"
+>
   ÁLBUM DE FOTOS
 </h2>
 <div class="gallery-grid">
-  {images.map((image) => (
-    <OpenImage image={image} />
-  ))}
+  {images.map((image) => <OpenImage image={image} />)}
 </div>
 
 <style>
@@ -20,43 +20,3 @@ import OpenImage from "./OpenImage.astro";
     grid-gap: 10px;
   }
 </style>
-
-<script type="module">
-  function determineImageOrientation(img) {
-    return new Promise((resolve) => {
-      if (img.complete) {
-        resolve(img.naturalWidth > img.naturalHeight ? 'horizontal' : 'vertical');
-      } else {
-        img.onload = () => resolve(img.naturalWidth > img.naturalHeight ? 'horizontal' : 'vertical');
-      }
-    });
-  }
-
-  async function resizeGridItem(item) {
-    const grid = document.querySelector(".gallery-grid");
-    const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-    const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-    const img = item.querySelector('img');
-    const orientation = await determineImageOrientation(img);
-    
-    let contentHeight;
-    if (orientation === 'vertical') {
-      contentHeight = img.naturalHeight * (item.offsetWidth / img.naturalWidth) * 1.5; // 1.5 times taller for vertical images
-    } else {
-      contentHeight = img.naturalHeight * (item.offsetWidth / img.naturalWidth);
-    }
-
-    const rowSpan = Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap));
-    item.style.gridRowEnd = `span ${rowSpan}`;
-  }
-
-  async function resizeAllGridItems() {
-    const allItems = document.getElementsByClassName("grid-item");
-    for (let x = 0; x < allItems.length; x++) {
-      await resizeGridItem(allItems[x]);
-    }
-  }
-
-  window.addEventListener("load", resizeAllGridItems);
-  window.addEventListener("resize", resizeAllGridItems);
-</script>
