@@ -1,6 +1,6 @@
 ---
 import OpenVideo from "./OpenVideo.astro";
-import { gvideos } from "@/lib/data";
+import { videos } from "@/lib/data";
 ---
 
 <h2
@@ -9,5 +9,5 @@ import { gvideos } from "@/lib/data";
   ÁLBUM DE VIDEOS
 </h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-3 p-4">
-  {gvideos.map((gvideo) => <OpenVideo video={gvideo} />)}
+  {videos.map((video) => <OpenVideo video={video} />)}
 </div>

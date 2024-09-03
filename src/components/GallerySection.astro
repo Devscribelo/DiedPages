@@ -1,5 +1,5 @@
 ---
-import { bimages } from '@/lib/data'
+import { images } from '@/lib/data'
 import OpenImage from "./OpenImage.astro";
 ---
 
@@ -9,8 +9,8 @@ import OpenImage from "./OpenImage.astro";
   ÁLBUM DE FOTOS
 </h2>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 p-4">
-  {bimages.map((bimage) => (
-    <OpenImage image={bimage} />
+  {images.slice(0,4).map((image) => (
+    <OpenImage image={image} />
   ))}
   
 </div>

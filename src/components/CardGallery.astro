@@ -1,5 +1,5 @@
 ---
-import { gimages } from "@/lib/data";
+import { images } from "@/lib/data";
 import OpenImage from "./OpenImage.astro";
 ---
 
@@ -10,5 +10,5 @@ import OpenImage from "./OpenImage.astro";
 </h2>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-3 p-4">
-  {gimages.map((gimage) => <OpenImage image={gimage} />)}
+  {images.map((image) => <OpenImage image={image} />)}
 </div>
