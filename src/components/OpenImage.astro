@@ -1,22 +1,30 @@
 ---
 import type { Images } from "@/lib/data";
+
 interface Props {
   image: Images;
 }
 
 const { image } = Astro.props;
 const { description, src } = image;
+
+// Generar un número aleatorio entre 1 y 3 para determinar el factor de altura de la imagen
+const heightFactor = Math.floor(Math.random() * 3) + 1;
 ---
 
-<a data-fancybox="gallery" data-src={src} data-caption={description}>
-  <div class="flex flex-col gap-3">
-    <div
-      class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl cursor-pointer"
-      style={`background-image: url(${src});`}
-    >
-    </div>
+<div class="grid-item">
+  <div class="content">
+    <a data-fancybox="gallery" data-src={src} data-caption={description} class="block w-full overflow-hidden rounded-xl">
+      <img
+        src={src}
+        alt={description}
+        class="w-full h-auto object-cover transition-transform duration-300 hover:scale-110"
+        style={`aspect-ratio: 1 / ${heightFactor}`}
+      />
+    </a>
   </div>
-</a>
+</div>
+
 <script type="module" is:inline>
   import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.esm.js";
 

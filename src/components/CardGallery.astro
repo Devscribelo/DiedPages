@@ -3,12 +3,52 @@ import { images } from "@/lib/data";
 import OpenImage from "./OpenImage.astro";
 ---
 
-<h2
-  class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5 pt-5 mx-auto"
->
+<h2 class="text-[#0e0e1b] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5 pt-5 mx-auto">
   ÁLBUM DE FOTOS
 </h2>
+<div class="gallery-grid">
+  {images.map((image) => (
+    <OpenImage image={image} />
+  ))}
 </div>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-3 p-4">
-  {images.map((image) => <OpenImage image={image} />)}
-</div>
+
+<style>
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 10px;
+    grid-gap: 10px;
+  }
+
+  @media (min-width: 640px) {
+    .gallery-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .gallery-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
+
+<script>
+  function resizeGridItem(item) {
+    const grid = document.querySelector(".gallery-grid");
+    const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+    const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+    const rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+    item.style.gridRowEnd = "span "+rowSpan;
+  }
+
+  function resizeAllGridItems() {
+    const allItems = document.getElementsByClassName("grid-item");
+    for(let x=0; x < allItems.length; x++){
+      resizeGridItem(allItems[x]);
+    }
+  }
+
+  window.addEventListener("load", resizeAllGridItems);
+  window.addEventListener("resize", resizeAllGridItems);
+</script>
