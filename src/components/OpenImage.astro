@@ -7,22 +7,16 @@ interface Props {
 
 const { image } = Astro.props;
 const { description, src } = image;
-
-// Generar un número aleatorio entre 1 y 3 para determinar el factor de altura de la imagen
-const heightFactor = Math.floor(Math.random() * 3) + 1;
 ---
 
 <div class="grid-item">
-  <div class="content">
-    <a data-fancybox="gallery" data-src={src} data-caption={description} class="block w-full overflow-hidden rounded-xl">
-      <img
-        src={src}
-        alt={description}
-        class="w-full h-auto object-cover transition-transform duration-300 hover:scale-110"
-        style={`aspect-ratio: 1 / ${heightFactor}`}
-      />
-    </a>
-  </div>
+  <a data-fancybox="gallery" data-src={src} data-caption={description} class="block w-full h-full overflow-hidden rounded-xl">
+    <img
+      src={src}
+      alt={description}
+      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+    />
+  </a>
 </div>
 
 <script type="module" is:inline>
