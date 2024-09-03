@@ -21,7 +21,7 @@ import OpenImage from "./OpenImage.astro";
   }
 </style>
 
-<script>
+<script type="module">
   function determineImageOrientation(img) {
     return new Promise((resolve) => {
       if (img.complete) {
