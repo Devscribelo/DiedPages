@@ -151,10 +151,6 @@ const { index } = Astro.props;
       max-height: 90vh;
     }
   }
-
-  body.modal-open {
-    overflow: hidden;
-  }
 </style>
 
 <script type="module">
@@ -213,9 +209,6 @@ const { index } = Astro.props;
       modal.classList.add("open");
     }, 50);
 
-    // Disable scroll on body
-    document.body.classList.add('modal-open');
-
     closeModalButton.addEventListener("click", closeModal);
     modalOverlay.addEventListener("click", closeModal);
 
@@ -234,8 +227,6 @@ const { index } = Astro.props;
       setTimeout(() => {
         modalOverlay.classList.remove("open");
         modal.style.display = "none";
-        // Enable scroll on body
-        document.body.classList.remove('modal-open');
       }, 300);
     }
 

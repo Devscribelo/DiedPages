@@ -80,8 +80,8 @@ import { logo, name } from "@/lib/data"
       {
         linksHeader.map((linkHeader) =>
           <a
-          class="text-xl text-[#a8955e] hover:text-[#d4b577] transition-colors duration-300 border-b border-gray-300 pb-2"
-          href={linkHeader.link}>{linkHeader.namelink}</a>
+          class="text-base font-poppins text-[#a8955e] hover:text-[#d4b577] transition-colors duration-300 border-b border-gray-300 pb-2 flex items-center gap-2"
+          href={linkHeader.link}><img src={linkHeader.icon}/><p>{linkHeader.namelink}</p></a>
         )
       }
     </div>
