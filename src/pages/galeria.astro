@@ -73,7 +73,7 @@ import Portada from "@/components/Portada.astro";
   async function resizeGridItem(item) {
       const grid = document.querySelector(".gallery-grid");
       const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue("grid-auto-rows"));
-      const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue("grid-row-gap"));
+      const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue("grid-gap"));
       const img = item.querySelector("img");
       const orientation = await determineImageOrientation(img);
 
