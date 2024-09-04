@@ -151,50 +151,50 @@ export interface Mensajes{
 export const mensajes: Mensajes[] = [
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
-        name: 'Canicas',
-        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.',
-        titulo: 'Recuerdo especial 1'
+        name: 'María López',
+        remember: 'María, tu bondad y alegría fueron un faro de luz en nuestras vidas. Aunque ya no estés con nosotros, tu risa y espíritu amoroso viven en cada uno de nuestros recuerdos. Te extrañamos profundamente, pero sabemos que tu presencia sigue iluminando nuestro camino.',
+        titulo: 'Siempre en nuestros corazones'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
-        name: 'Canicas',
-        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.',
-        titulo: 'Recuerdo especial 2'
+        name: 'José Ramírez',
+        remember: 'José, fuiste un pilar de fuerza y amor para todos los que tuvimos el honor de conocerte. Tu dedicación a la familia y amigos dejó un legado que nunca se desvanecerá. Siempre vivirás en nuestros corazones, recordado por tu generosidad y sabiduría.',
+        titulo: 'Un legado eterno'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
-        name: 'Canicas',
-        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.',
-        titulo: 'Recuerdo especial 3333'
+        name: 'Carmen González',
+        remember: 'Carmen, aunque el tiempo haya pasado desde que te fuiste, tu luz sigue brillando intensamente en nuestras vidas. Recordamos con cariño cada momento compartido y seguimos sintiendo tu presencia en cada rincón de nuestros corazones. Te extrañamos, pero sabemos que estás en paz.',
+        titulo: 'En memoria'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
-        name: 'Canicas',
-        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.',
-        titulo: 'Recuerdo especial 3333'
+        name: 'Luis Fernández',
+        remember: 'Luis, tu espíritu amable y tu generosidad fueron una bendición para todos los que te conocimos. Aun en la distancia, tu influencia y ejemplo siguen inspirándonos cada día. Siempre estarás en nuestros pensamientos, y tu memoria vivirá eternamente en nuestras almas.',
+        titulo: 'Nunca te olvidaremos'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
-        name: 'Canicas',
-        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.',
-        titulo: 'Recuerdo especial 3333'
+        name: 'Ana Torres',
+        remember: 'Ana, tu amor incondicional y tu calidez dejaron una huella imborrable en todos nosotros. Aunque ya no estés físicamente, el impacto de tu vida se siente en cada gesto de amor y en cada sonrisa que nos brindaste. Siempre te recordaremos con profunda gratitud y cariño.',
+        titulo: 'Una vida llena de amor'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
-        name: 'Canicas',
-        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.',
-        titulo: 'Recuerdo especial 3333'
+        name: 'Pedro Sánchez',
+        remember: 'Pedro, tu vida fue un ejemplo de fuerza, dedicación y amor. Aunque tu ausencia se siente profundamente, encontramos consuelo en saber que ahora descansas en paz. Te extrañamos muchísimo, y tu memoria continuará inspirándonos a ser mejores cada día.',
+        titulo: 'Descansa en paz'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
-        name: 'Canicas',
-        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.',
-        titulo: 'Recuerdo especial 3333'
+        name: 'Elena Martínez',
+        remember: 'Elena, tu sonrisa era capaz de iluminar hasta los días más oscuros. Aunque ya no podamos verla, la llevamos en nuestros corazones y en cada recuerdo feliz que compartimos contigo. Tu espíritu alegre y amoroso sigue siendo una fuente de luz para todos nosotros.',
+        titulo: 'Recordando tu sonrisa'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
-        name: 'Canicas',
-        remember: 'Con profunda tristeza y un corazón lleno de melancolía, quiero compartir un recuerdo especial de nuestro querido amigo Juan Gabriel. En cada rincón de nuestras memorias, su risa y su presencia aún resuenan con la misma calidez y alegría que siempre nos brindó. Aunque su ausencia deja un vacío profundo, su espíritu sigue vivo en cada historia y en cada sonrisa que compartimos en su honor.',
-        titulo: 'Recuerdo especial 3333'
+        name: 'Juan Pérez',
+        remember: 'Juan, tu vida fue un regalo invaluable para todos los que te conocieron. Nos dejas un legado de amor, respeto y fortaleza que nunca olvidaremos. Te honramos hoy y siempre, recordando cada momento compartido con profunda gratitud y amor.',
+        titulo: 'Homenaje a tu vida'
     },
 ]
