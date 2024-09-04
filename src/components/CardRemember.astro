@@ -43,6 +43,7 @@ const { index } = Astro.props;
 </div>
 
 <style>
+
   .button {
     border-radius: 4px;
     border: 1px solid rgba(156, 163, 175, 0.6);
@@ -150,19 +151,14 @@ const { index } = Astro.props;
       max-height: 90vh;
     }
   }
-
-  body.modal-open {
-    position: fixed;
-    width: 100%;
-    overflow: hidden;
-    top: 0;
-  }
 </style>
 
 <script type="module">
   function openModal(index) {
     const openModalButton = document.getElementById(`openModalButton-${index}`);
-    const closeModalButton = document.getElementById(`closeModalButton-${index}`);
+    const closeModalButton = document.getElementById(
+      `closeModalButton-${index}`
+    );
     const modalOverlay = document.getElementById(`modalOverlay-${index}`);
     const modal = document.getElementById(`modal-${index}`);
 
@@ -213,9 +209,6 @@ const { index } = Astro.props;
       modal.classList.add("open");
     }, 50);
 
-    // Desactivar el scroll en el cuerpo sin ocultar el contenido
-    document.body.classList.add('modal-open');
-
     closeModalButton.addEventListener("click", closeModal);
     modalOverlay.addEventListener("click", closeModal);
 
@@ -234,8 +227,6 @@ const { index } = Astro.props;
       setTimeout(() => {
         modalOverlay.classList.remove("open");
         modal.style.display = "none";
-        // Habilitar el scroll en el cuerpo
-        document.body.classList.remove('modal-open');
       }, 300);
     }
 
