@@ -58,38 +58,6 @@ export const images: Images[] = [
     {
         description: '',
         src: '/gallery/13.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/14.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/15.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/16.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/17.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/18.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/19.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/20.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/21.jpg'
     }
 ]
 
@@ -100,8 +68,8 @@ export interface Videos{
 
 export const videos: Videos[] = [
     {
-        href:'https://www.youtube.com/watch?v=R0d56K_xOLM',
-        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
+        img: 'https://img.youtube.com/vi/S-p7Rkr1dt4/maxresdefault.jpg'
     },
     {
         href:'https://www.youtube.com/watch?v=R0d56K_xOLM',
