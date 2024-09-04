@@ -58,38 +58,6 @@ export const images: Images[] = [
     {
         description: '',
         src: '/gallery/13.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/14.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/15.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/16.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/17.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/18.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/19.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/20.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/21.jpg'
     }
 ]
 
