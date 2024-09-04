@@ -10,11 +10,7 @@ const { index } = Astro.props;
 ---
 
 <button class="button" id={`openModalButton-${index}`} data-index={index}>
-  <img
-    src={mensaje.img}
-    alt="Book Cover"
-    style="width: 50px; height: 50px; border-radius: 4px;"
-  />
+  <div style={`background-image: url(${mensaje.img}); width:40px; height: 50px; border-radius:4px;`} class="w-full h-full bg-center bg-no-repeat bg-cover text-justify"></div>
   <div class="mx-auto">
     <h3 style="margin: 0; font-size: 14px; font-weight: medium; color: black;">
       {mensaje.titulo}
@@ -26,7 +22,8 @@ const { index } = Astro.props;
   <div class="modal" id={`modal-${index}`}>
     <div class="modal-content">
       <div class="modal-image-container">
-        <img src={mensaje.img} alt="Book Cover" />
+        <div style={`background-image: url(${mensaje.img}); width:200px; height: 250px; border-radius:10px;`} class="w-full h-full bg-center bg-no-repeat bg-cover text-justify">
+        </div>
       </div>
       <h2 style="color: black;">{mensaje.titulo}</h2>
       <p style="color: gray; font-weight: light;">{mensaje.name}</p>
