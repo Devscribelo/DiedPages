@@ -100,44 +100,44 @@ export interface Videos{
 
 export const videos: Videos[] = [
     {
-        href:'https://www.youtube.com/watch?v=R0d56K_xOLM',
-        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
+        img: 'https://img.youtube.com/vi/S-p7Rkr1dt4/maxresdefault.jpg'
     },
     {
-        href:'https://www.youtube.com/watch?v=R0d56K_xOLM',
-        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=I4WZeD5BgQ0',
+        img: 'https://img.youtube.com/vi/I4WZeD5BgQ0/maxresdefault.jpg'
     },
     {
-        href:'https://www.youtube.com/watch?v=R0d56K_xOLM',
-        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
+        img: 'https://img.youtube.com/vi/S-p7Rkr1dt4/maxresdefault.jpg'
     },
     {
-        href:'https://www.youtube.com/watch?v=R0d56K_xOLM',
-        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
+        img: 'https://img.youtube.com/vi/I4WZeD5BgQ0/maxresdefault.jpg'
     },
     {
-        href:'https://www.youtube.com/watch?v=R0d56K_xOLM',
-        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
+        img: 'https://img.youtube.com/vi/S-p7Rkr1dt4/maxresdefault.jpg'
     },
     {
-        href:'https://www.youtube.com/watch?v=R0d56K_xOLM',
-        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
+        img: 'https://img.youtube.com/vi/I4WZeD5BgQ0/maxresdefault.jpg'
     },
     {
-        href:'https://www.youtube.com/watch?v=R0d56K_xOLM',
-        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
+        img: 'https://img.youtube.com/vi/S-p7Rkr1dt4/maxresdefault.jpg'
     },
     {
-        href:'https://www.youtube.com/watch?v=R0d56K_xOLM',
-        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
+        img: 'https://img.youtube.com/vi/I4WZeD5BgQ0/maxresdefault.jpg'
     },
     {
-        href:'https://www.youtube.com/watch?v=R0d56K_xOLM',
-        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
+        img: 'https://img.youtube.com/vi/S-p7Rkr1dt4/maxresdefault.jpg'
     },
     {
-        href:'https://www.youtube.com/watch?v=R0d56K_xOLM',
-        img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
+        img: 'https://img.youtube.com/vi/I4WZeD5BgQ0/maxresdefault.jpg'
     }
 ]
 
