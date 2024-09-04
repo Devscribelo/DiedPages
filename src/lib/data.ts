@@ -92,49 +92,50 @@ export const mensajes: Mensajes[] = [
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
         name: 'María López',
-        remember: 'María, tu bondad y alegría fueron un faro de luz en nuestras vidas. Aunque ya no estés con nosotros, tu risa y espíritu amoroso viven en cada uno de nuestros recuerdos. Te extrañamos profundamente, pero sabemos que tu presencia sigue iluminando nuestro camino.',
-        titulo: 'Siempre en nuestros corazones'
+        remember: 'Juan Gabriel, tus historias siempre nos hacían reír, llenando de alegría cada reunión. Recordamos cómo con una sonrisa podías transformar cualquier momento en algo especial. Aunque ya no estés físicamente con nosotros, seguimos contando tus anécdotas y sintiendo tu presencia en cada conversación. Gracias por los recuerdos inolvidables que nos regalaste.',
+        titulo: 'Historias que nunca olvidaremos'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
         name: 'José Ramírez',
-        remember: 'José, fuiste un pilar de fuerza y amor para todos los que tuvimos el honor de conocerte. Tu dedicación a la familia y amigos dejó un legado que nunca se desvanecerá. Siempre vivirás en nuestros corazones, recordado por tu generosidad y sabiduría.',
-        titulo: 'Un legado eterno'
+        remember: 'Juan Gabriel, eras el alma de nuestras fiestas y un amigo que siempre sabía cómo hacer sentir a los demás queridos. Las tardes de domingo no serán lo mismo sin ti, pero en cada brindis te recordamos con cariño. Nos dejas una huella imborrable llena de momentos felices.',
+        titulo: 'Celebrando tu vida'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
         name: 'Carmen González',
-        remember: 'Carmen, aunque el tiempo haya pasado desde que te fuiste, tu luz sigue brillando intensamente en nuestras vidas. Recordamos con cariño cada momento compartido y seguimos sintiendo tu presencia en cada rincón de nuestros corazones. Te extrañamos, pero sabemos que estás en paz.',
-        titulo: 'En memoria'
+        remember: 'Aunque te hayas ido, Juan Gabriel, tu generosidad y calidez siguen siendo un ejemplo para todos nosotros. Tu puerta siempre estaba abierta para quienes necesitaban un consejo o simplemente una charla. Recordamos con cariño esas largas conversaciones que nos daban paz y claridad.',
+        titulo: 'En memoria de tu sabiduría'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
         name: 'Luis Fernández',
-        remember: 'Luis, tu espíritu amable y tu generosidad fueron una bendición para todos los que te conocimos. Aun en la distancia, tu influencia y ejemplo siguen inspirándonos cada día. Siempre estarás en nuestros pensamientos, y tu memoria vivirá eternamente en nuestras almas.',
-        titulo: 'Nunca te olvidaremos'
+        remember: 'Nos cuesta aceptar que ya no estás con nosotros, pero en cada recuerdo sentimos tu presencia, Juan Gabriel. Siempre tenías una palabra amable y un gesto de cariño. Hoy, más que nunca, agradecemos todos esos momentos que compartimos contigo. La vida no será igual sin tu compañía.',
+        titulo: 'Siempre en nuestros pensamientos'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
         name: 'Ana Torres',
-        remember: 'Ana, tu amor incondicional y tu calidez dejaron una huella imborrable en todos nosotros. Aunque ya no estés físicamente, el impacto de tu vida se siente en cada gesto de amor y en cada sonrisa que nos brindaste. Siempre te recordaremos con profunda gratitud y cariño.',
-        titulo: 'Una vida llena de amor'
+        remember: 'Juan Gabriel, tu amor por la vida era contagioso. Cada día que pasaba a tu lado se llenaba de aventuras y risas. Gracias por enseñarnos a vivir el presente y disfrutar cada momento como si fuera el último. Te extrañamos profundamente, pero seguimos tus enseñanzas día a día.',
+        titulo: 'Una vida llena de aventuras'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
         name: 'Pedro Sánchez',
-        remember: 'Pedro, tu vida fue un ejemplo de fuerza, dedicación y amor. Aunque tu ausencia se siente profundamente, encontramos consuelo en saber que ahora descansas en paz. Te extrañamos muchísimo, y tu memoria continuará inspirándonos a ser mejores cada día.',
-        titulo: 'Descansa en paz'
+        remember: 'Juan Gabriel, tu fortaleza ante la adversidad nos inspiró a todos. Siempre encontrabas una forma de salir adelante, y nunca perdiste tu espíritu optimista. Hoy te recordamos como un ejemplo de perseverancia y coraje, y seguimos tu ejemplo en los momentos difíciles.',
+        titulo: 'Ejemplo de valentía'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
         name: 'Elena Martínez',
-        remember: 'Elena, tu sonrisa era capaz de iluminar hasta los días más oscuros. Aunque ya no podamos verla, la llevamos en nuestros corazones y en cada recuerdo feliz que compartimos contigo. Tu espíritu alegre y amoroso sigue siendo una fuente de luz para todos nosotros.',
-        titulo: 'Recordando tu sonrisa'
+        remember: 'Aunque el tiempo pase, nunca olvidaremos los momentos que compartimos con Juan Gabriel. Su sentido del humor, su bondad y su espíritu generoso dejaron una marca en cada uno de nosotros. Siempre tendrás un lugar especial en nuestros corazones.',
+        titulo: 'Un legado de amor y alegría'
     },
     {
         img: 'https://img.youtube.com/vi/R0d56K_xOLM/maxresdefault.jpg',
         name: 'Juan Pérez',
-        remember: 'Juan, tu vida fue un regalo invaluable para todos los que te conocieron. Nos dejas un legado de amor, respeto y fortaleza que nunca olvidaremos. Te honramos hoy y siempre, recordando cada momento compartido con profunda gratitud y amor.',
-        titulo: 'Homenaje a tu vida'
+        remember: 'Juan Gabriel, tu vida estuvo llena de buenos momentos, y estamos agradecidos por haber sido parte de ellos. Cada recuerdo es un tesoro que guardamos con cariño, y tu risa resuena en nuestras memorias. Te recordaremos siempre con amor y gratitud.',
+        titulo: 'Guardando tus recuerdos con amor'
     },
+    
 ]
