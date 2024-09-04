@@ -8,27 +8,7 @@ import OpenImage from "./OpenImage.astro";
 >
   ÁLBUM DE FOTOS
 </h2>
-<div class="gallery-grid">
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-3 p-4">
   {images.map((image) => <OpenImage image={image} />)}
 </div>
-
-<style>
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Fuerza siempre tres columnas */
-    grid-auto-rows: 10px;
-    grid-gap: 10px;
-  }
-
-  @media (max-width: 768px) {
-    .gallery-grid {
-      grid-template-columns: repeat(3, 1fr); /* Mantiene tres columnas en tablets */
-    }
-  }
-
-  @media (max-width: 480px) {
-    .gallery-grid {
-      grid-template-columns: repeat(2, 1fr); /* Mantiene tres columnas en móviles */
-    }
-  }
-</style>

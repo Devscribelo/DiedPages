@@ -55,10 +55,6 @@ export const images: Images[] = [
         description: '',
         src: '/gallery/12.jpg'
     },
-    {
-        description: '',
-        src: '/gallery/13.jpg'
-    }
 ]
 
 export interface Videos{

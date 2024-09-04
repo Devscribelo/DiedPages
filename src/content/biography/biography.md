@@ -1,5 +1,5 @@
 ---
-img: 'background-image: url("/gallery/13.jpg");'
+img: 'background-image: url("/gallery/12.jpg");'
 name: Juan Gabriel León Carpio
 birthyear: 1928
 deathyear: 2022
