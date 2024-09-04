@@ -86,6 +86,10 @@ export const images: Images[] = [
     {
         description: '',
         src: '/gallery/20.jpg'
+    },
+    {
+        description: '',
+        src: '/gallery/21.jpg'
     }
 ]
 
