@@ -108,36 +108,12 @@ export const videos: Videos[] = [
         img: 'https://img.youtube.com/vi/I4WZeD5BgQ0/maxresdefault.jpg'
     },
     {
-        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
-        img: 'https://img.youtube.com/vi/S-p7Rkr1dt4/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=CHxFSVoNbWY',
+        img: 'https://img.youtube.com/vi/CHxFSVoNbWY/maxresdefault.jpg'
     },
     {
-        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
-        img: 'https://img.youtube.com/vi/I4WZeD5BgQ0/maxresdefault.jpg'
-    },
-    {
-        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
-        img: 'https://img.youtube.com/vi/S-p7Rkr1dt4/maxresdefault.jpg'
-    },
-    {
-        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
-        img: 'https://img.youtube.com/vi/I4WZeD5BgQ0/maxresdefault.jpg'
-    },
-    {
-        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
-        img: 'https://img.youtube.com/vi/S-p7Rkr1dt4/maxresdefault.jpg'
-    },
-    {
-        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
-        img: 'https://img.youtube.com/vi/I4WZeD5BgQ0/maxresdefault.jpg'
-    },
-    {
-        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
-        img: 'https://img.youtube.com/vi/S-p7Rkr1dt4/maxresdefault.jpg'
-    },
-    {
-        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
-        img: 'https://img.youtube.com/vi/I4WZeD5BgQ0/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=2ZJ20oWWau4',
+        img: 'https://img.youtube.com/vi/2ZJ20oWWau4/maxresdefault.jpg'
     }
 ]
 
