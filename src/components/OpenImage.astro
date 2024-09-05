@@ -18,30 +18,14 @@ const { description, src } = image;
     </div>
   </div>
 <div/>
-<script type="module" is:inline>
+<script type="module">
   import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.esm.js";
 
-  function initFancybox() {
-    Fancybox.bind('[data-fancybox="gallery"]', {
-      on: {
-        closing: (fancybox, slide) => {
-          // Prevenir el comportamiento por defecto
-          return false;
-        }
-      },
-      Hash: false
-    });
-  }
+  // Opciones personalizadas
+  const options = {
+    // Agrega aquí tus opciones personalizadas
+  };
 
-  // Inicializar Fancybox al cargar la página
-  document.addEventListener('DOMContentLoaded', initFancybox);
-
-  // Re-inicializar Fancybox después de la navegación
-  document.addEventListener('astro:page-load', initFancybox);
-
-  // Destruir instancias existentes antes de la navegación
-  document.addEventListener('astro:before-swap', () => {
-    Fancybox.close(true); // Cierra todas las instancias abiertas
-    Fancybox.destroy(); // Destruye las instancias de Fancybox
-  });
+  // Inicializa Fancybox
+  Fancybox.bind("[data-fancybox]", options);
 </script>
