@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import Header from "@/components/Header.astro";
 
@@ -23,20 +22,111 @@ const { title } = Astro.props;
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
-    <ViewTransitions />
   </head>
-  <body class="bg-[#f8f8fb] font-sans bg-[url('/fondo11.svg')] ">
+  <body class="bg-[#f8f8fb] font-sans bg-[url('/fondo11.svg')]">
+    <div class="loader loader--style6" title="5">
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="24px"
+        height="30px"
+        viewBox="0 0 24 30"
+        style="enable-background:new 0 0 50 50;"
+        xml:space="preserve"
+      >
+        <rect x="0" y="13" width="4" height="5" fill="#333">
+          <animate
+            attributeName="height"
+            attributeType="XML"
+            values="5;21;5"
+            begin="0s"
+            dur="0.6s"
+            repeatCount="indefinite"></animate>
+          <animate
+            attributeName="y"
+            attributeType="XML"
+            values="13; 5; 13"
+            begin="0s"
+            dur="0.6s"
+            repeatCount="indefinite"></animate>
+        </rect>
+        <rect x="10" y="13" width="4" height="5" fill="#333">
+          <animate
+            attributeName="height"
+            attributeType="XML"
+            values="5;21;5"
+            begin="0.15s"
+            dur="0.6s"
+            repeatCount="indefinite"></animate>
+          <animate
+            attributeName="y"
+            attributeType="XML"
+            values="13; 5; 13"
+            begin="0.15s"
+            dur="0.6s"
+            repeatCount="indefinite"></animate>
+        </rect>
+        <rect x="20" y="13" width="4" height="5" fill="#333">
+          <animate
+            attributeName="height"
+            attributeType="XML"
+            values="5;21;5"
+            begin="0.3s"
+            dur="0.6s"
+            repeatCount="indefinite"></animate>
+          <animate
+            attributeName="y"
+            attributeType="XML"
+            values="13; 5; 13"
+            begin="0.3s"
+            dur="0.6s"
+            repeatCount="indefinite"></animate>
+        </rect>
+      </svg>
+    </div>
     <Header />
     <slot />
     <Footer />
   </body>
 </html>
 <style is:global>
-  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-  h2{
+  h2 {
     font-family: "Poppins", sans-serif;
   }
+
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 1);
+    z-index: 9999;
+  }
+
+  svg path,
+  svg rect {
+    fill: #a8955e;
+  }
 </style>
+<script type="module">
+  window.addEventListener("load", function () {
+
+    const loader = document.querySelector(".loader");
+
+    if (loader) {
+      loader.style.display = "none";
+    }
+  });
+</script>
