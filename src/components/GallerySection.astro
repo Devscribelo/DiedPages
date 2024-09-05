@@ -1,6 +1,7 @@
 ---
 import { images } from '@/lib/data'
 import OpenImage from "./OpenImage.astro";
+import ButtonVerMas from './ButtonVerMas.astro';
 ---
 
 <h2
@@ -12,6 +13,7 @@ import OpenImage from "./OpenImage.astro";
   {images.slice(0,4).map((image) => (
     <OpenImage image={image} />
   ))}
-  
 </div>
-
+<div class=" text-center">
+  <ButtonVerMas href='/galeria' text="VER MÁS FOTOS" />
+</div>
