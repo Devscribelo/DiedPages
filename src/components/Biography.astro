@@ -47,3 +47,27 @@ const { img, name, birthyear, deathyear, footer } = biographia.data;
 >
   "{footer}"
 </p>
+
+<script type="module">
+  document.addEventListener('DOMContentLoaded', function () {
+    const textContainer = document.getElementById('text-container');
+    const toggleButton = document.getElementById('toggle-button');
+    const fullText = textContainer.innerHTML.trim();
+    const truncatedText = fullText.substring(0, 400) + '...';
+
+    // Inicialmente muestra el texto truncado
+    textContainer.innerHTML = truncatedText;
+
+    toggleButton.addEventListener('click', function () {
+      if (toggleButton.innerHTML === 'VER MÁS') {
+        // Mostrar el texto completo y cambiar el botón a "Ver menos"
+        textContainer.innerHTML = fullText;
+        toggleButton.innerHTML = 'VER MENOS';
+      } else {
+        // Mostrar el texto truncado y cambiar el botón a "Ver más"
+        textContainer.innerHTML = truncatedText;
+        toggleButton.innerHTML = 'VER MÁS';
+      }
+    });
+  });
+</script>
