@@ -40,7 +40,6 @@ const { index } = Astro.props;
 </div>
 
 <style>
-
   .button {
     border-radius: 4px;
     border: 1px solid rgba(156, 163, 175, 0.6);
@@ -152,97 +151,111 @@ const { index } = Astro.props;
 
 <script type="module">
   function openModal(index) {
-    const openModalButton = document.getElementById(`openModalButton-${index}`);
-    const closeModalButton = document.getElementById(
-      `closeModalButton-${index}`
-    );
-    const modalOverlay = document.getElementById(`modalOverlay-${index}`);
-    const modal = document.getElementById(`modal-${index}`);
+  const openModalButton = document.getElementById(`openModalButton-${index}`);
+  const closeModalButton = document.getElementById(`closeModalButton-${index}`);
+  const modalOverlay = document.getElementById(`modalOverlay-${index}`);
+  const modal = document.getElementById(`modal-${index}`);
 
-    function getCardRect() {
-      return openModalButton.getBoundingClientRect();
-    }
+  function getCardRect() {
+    return openModalButton.getBoundingClientRect();
+  }
 
-    function setModalPosition(rect) {
-      modal.style.top = `${rect.top}px`;
-      modal.style.left = `${rect.left}px`;
-      modal.style.width = `${rect.width}px`;
-      modal.style.height = `${rect.height}px`;
-    }
+  function setModalPosition(rect) {
+    modal.style.top = `${rect.top}px`;
+    modal.style.left = `${rect.left}px`;
+    modal.style.width = `${rect.width}px`;
+    modal.style.height = `${rect.height}px`;
+  }
 
-    function getModalEndRect() {
-      const width = Math.min(400, window.innerWidth * 0.9);
-      return {
-        top: Math.max(20, (window.innerHeight - 500) / 2),
-        left: (window.innerWidth - width) / 2,
-        width: width,
-        height: Math.min(500, window.innerHeight * 0.8),
-      };
-    }
+  function getModalEndRect() {
+    const width = Math.min(400, window.innerWidth * 0.9);
+    return {
+      top: Math.max(20, (window.innerHeight - 500) / 2),
+      left: (window.innerWidth - width) / 2,
+      width: width,
+      height: Math.min(500, window.innerHeight * 0.8),
+    };
+  }
 
-    function animateModal(start, end, isOpening) {
-      setModalPosition(start);
-      modal.style.transition = "none";
-      modal.style.opacity = isOpening ? "0" : "1";
+  function animateModal(start, end, isOpening) {
+    setModalPosition(start);
+    modal.style.transition = "none";
+    modal.style.opacity = isOpening ? "0" : "1";
 
-      requestAnimationFrame(() => {
-        modal.style.transition = "all 0.3s ease";
-        modal.style.top = `${end.top}px`;
-        modal.style.left = `${end.left}px`;
-        modal.style.width = `${end.width}px`;
-        modal.style.height = `${end.height}px`;
-        modal.style.opacity = isOpening ? "1" : "0";
-      });
-    }
-
-    const startRect = getCardRect();
-    const endRect = getModalEndRect();
-
-    modalOverlay.classList.add("open");
-    modal.style.display = "flex";
-    animateModal(startRect, endRect, true);
-
-    setTimeout(() => {
-      modal.classList.add("open");
-    }, 50);
-
-    closeModalButton.addEventListener("click", closeModal);
-    modalOverlay.addEventListener("click", closeModal);
-
-    function closeModal() {
-      const startRect = {
-        top: parseInt(modal.style.top),
-        left: parseInt(modal.style.left),
-        width: parseInt(modal.style.width),
-        height: parseInt(modal.style.height),
-      };
-      const endRect = getCardRect();
-
-      modal.classList.remove("open");
-      animateModal(startRect, endRect, false);
-
-      setTimeout(() => {
-        modalOverlay.classList.remove("open");
-        modal.style.display = "none";
-      }, 300);
-    }
-
-    modal.addEventListener("click", (e) => {
-      e.stopPropagation();
-    });
-
-    window.addEventListener("resize", () => {
-      if (modalOverlay.classList.contains("open")) {
-        const endRect = getModalEndRect();
-        setModalPosition(endRect);
-      }
+    requestAnimationFrame(() => {
+      modal.style.transition = "all 0.3s ease";
+      modal.style.top = `${end.top}px`;
+      modal.style.left = `${end.left}px`;
+      modal.style.width = `${end.width}px`;
+      modal.style.height = `${end.height}px`;
+      modal.style.opacity = isOpening ? "1" : "0";
     });
   }
 
-  document.querySelectorAll('[id^="openModalButton"]').forEach((button) => {
-    button.addEventListener("click", () => {
-      const index = button.getAttribute("data-index");
-      openModal(index);
-    });
+  const startRect = getCardRect();
+  const endRect = getModalEndRect();
+
+  modalOverlay.classList.add("open");
+  modal.style.display = "flex";
+  animateModal(startRect, endRect, true);
+
+  // Desactivar el scroll
+  document.body.classList.add('no-scroll');
+
+  setTimeout(() => {
+    modal.classList.add("open");
+  }, 50);
+
+  closeModalButton.addEventListener("click", closeModal);
+  modalOverlay.addEventListener("click", closeModal);
+
+  function closeModal() {
+    // Activar el scroll
+    document.body.classList.remove('no-scroll');
+
+    const startRect = {
+      top: parseInt(modal.style.top),
+      left: parseInt(modal.style.left),
+      width: parseInt(modal.style.width),
+      height: parseInt(modal.style.height),
+    };
+    const endRect = getCardRect();
+
+    modal.classList.remove("open");
+    animateModal(startRect, endRect, false);
+
+    setTimeout(() => {
+      modalOverlay.classList.remove("open");
+      modal.style.display = "none";
+    }, 300);
+  }
+
+  modal.addEventListener("click", (e) => {
+    e.stopPropagation();
   });
+
+  window.addEventListener("resize", () => {
+    if (modalOverlay.classList.contains("open")) {
+      const endRect = getModalEndRect();
+      setModalPosition(endRect);
+    }
+  });
+}
+
+document.querySelectorAll('[id^="openModalButton"]').forEach((button) => {
+  button.addEventListener("click", () => {
+    const index = button.getAttribute("data-index");
+    openModal(index);
+  });
+});
+
+// CSS para desactivar el scroll
+document.head.insertAdjacentHTML('beforeend', `
+  <style>
+    .no-scroll {
+      overflow: hidden;
+    }
+  </style>
+`);
+
 </script>
