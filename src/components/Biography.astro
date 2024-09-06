@@ -58,9 +58,10 @@ const { img, name, birthyear, deathyear, footer } = biographia.data;
         textContainer.innerHTML = fullText;
         toggleButton.innerHTML = 'VER MENOS';
       } else {
-        // Mostrar el texto truncado y cambiar el botón a "Ver más"
+        // Mostrar el texto truncado, cambiar el botón a "Ver más" y hacer scroll al contenedor de texto
         textContainer.innerHTML = truncatedText;
         toggleButton.innerHTML = 'VER MÁS';
+        textContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });
