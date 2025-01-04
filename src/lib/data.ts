@@ -1,5 +1,5 @@
 export const logo: string = '/logore.svg'
-export const name: string = 'Juan Gabriel León Carpio'
+export const name: string = 'Melchora Sernaque Braco'
 
 export interface Images {
     description: string;
@@ -54,6 +54,26 @@ export const images: Images[] = [
     {
         description: '',
         src: '/gallery/12.jpg'
+    },
+    {
+        description: '',
+        src: '/gallery/13.jpg'
+    },
+    {
+        description: '',
+        src: '/gallery/14.jpg'
+    },
+    {
+        description: '',
+        src: '/gallery/15.jpg'
+    },
+    {
+        description: '',
+        src: '/gallery/16.jpg'
+    },
+    {
+        description: '',
+        src: '/gallery/17.jpg'
     },
 ]
 
