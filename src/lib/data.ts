@@ -90,7 +90,7 @@ export const videos: Videos[] = [
     {
         href:'https://www.youtube.com/watch?v=JuZSJsGolvA&ab_channel=rqerdoseternos',
         img: 'vi02.png'
-    },
+    }
     // {
     //     href:'https://www.youtube.com/watch?v=CHxFSVoNbWY',
     //     img: 'https://img.youtube.com/vi/CHxFSVoNbWY/maxresdefault.jpg'
