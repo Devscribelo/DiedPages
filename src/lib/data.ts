@@ -84,21 +84,21 @@ export interface Videos{
 
 export const videos: Videos[] = [
     {
-        href:'https://www.youtube.com/watch?v=S-p7Rkr1dt4',
-        img: 'https://img.youtube.com/vi/S-p7Rkr1dt4/maxresdefault.jpg'
+        href:'https://youtu.be/60HgGs4WLBw',
+        img: 'vi01.png'
     },
     {
-        href:'https://www.youtube.com/watch?v=I4WZeD5BgQ0',
-        img: 'https://img.youtube.com/vi/I4WZeD5BgQ0/maxresdefault.jpg'
+        href:'https://www.youtube.com/watch?v=JuZSJsGolvA&ab_channel=rqerdoseternos',
+        img: 'vi02.png'
     },
-    {
-        href:'https://www.youtube.com/watch?v=CHxFSVoNbWY',
-        img: 'https://img.youtube.com/vi/CHxFSVoNbWY/maxresdefault.jpg'
-    },
-    {
-        href:'https://www.youtube.com/watch?v=2ZJ20oWWau4',
-        img: 'https://img.youtube.com/vi/2ZJ20oWWau4/maxresdefault.jpg'
-    }
+    // {
+    //     href:'https://www.youtube.com/watch?v=CHxFSVoNbWY',
+    //     img: 'https://img.youtube.com/vi/CHxFSVoNbWY/maxresdefault.jpg'
+    // },
+    // {
+    //     href:'https://www.youtube.com/watch?v=2ZJ20oWWau4',
+    //     img: 'https://img.youtube.com/vi/2ZJ20oWWau4/maxresdefault.jpg'
+    // }
 ]
 
 export interface Mensajes{
