@@ -112,13 +112,7 @@ export const mensajes: Mensajes[] = [
     {
         img: '/imgmensajes/1.jpg',
         name: 'Mariela Oliva V.',
-        remember: `Para la Mamá Melchora …
-        De tu nieta Mariela, 
-        Mami siempre nos decías que tenías miedo de no saber qué nos pasaría el día que te fueras. 
-        Quiero que sepas que nos ha pasado de todo, pero todo nos ha llevado a buenos caminos. 
-        Tu ausencia fue difícil, los cambios que eso conllevó también, pero sé que desde donde estés 
-        has visto nuestras luchas y sabes que hemos hecho las cosas correctas. 
-        Gracias por todo tu amor 💕.`,
+        remember: 'Para la Mamá Melchora …\nDe tu nieta Mariela, \nMami siempre nos decías que tenías miedo de no saber qué nos pasaría el día que te fueras. \nQuiero que sepas que nos ha pasado de todo, pero todo nos ha llevado a buenos caminos. \nTu ausencia fue difícil, los cambios que eso conllevó también, pero sé que desde donde estés \nhas visto nuestras luchas y sabes que hemos hecho las cosas correctas. \nGracias por todo tu amor 💕.',
         titulo: 'Mensajes que Trascienden'
     },
     {
@@ -161,7 +155,7 @@ export const mensajes: Mensajes[] = [
         name: 'Carmen Margarita oliva sernaque (hija)',
         remember: 'Hoy quiero decir bien ¡feliz cumpleaños hasta el cielo, mamá! Te echo de menos y hoy pienso en ti más que cualquier día. Sé cuanto amabas celebrar, y sé lo alegre que pasabas siempre este día. Por eso, festejaremos junto a toda la familia, brindaremos por la hermosa mujer que fuiste y por todo lo que nos dejaste. Te amo.',
         titulo: 'Celebrando Tu Amor Eterno'
-    },
+    }
     // {
     //     img: '/imgmensajes/7.jpeg',
     //     name: 'Elena Martínez',
