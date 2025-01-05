@@ -140,19 +140,19 @@ export const mensajes: Mensajes[] = [
     },
     {
         img: '/imgmensajes/a1.jpeg',
-        name: 'Amelia oliva S (hija)',
+        name: 'Amelia Oliva Sernaque (hija)',
         remember: 'Feliz cumpleaños hasta el cielo! Por mucho que pase el. Tiempo este doa no lo olvido porque sigues presente en mi corazón y en mis memorias, y nunca saldras de ahi. Sé que hoy, desde el cielo, tambien festejaras, y te acordás de todo los que aquí estamos manteniendo vivo tu recuerdo',
         titulo: 'Un Cumpleaños Eterno en el Corazón'
     },
     {
         img: '/imgmensajes/a2.jpeg',
-        name: 'Amelia oliva S (hija)',
+        name: 'Tatiana Prada Oliva (nieta)',
         remember: 'Queria mamá melchora aun cuardo los mejores recuerdos de mi niñez junto quiero que sepas que te amo mucho nunca te olvidare y seguire luchando como tu me lo enseñastes mamita. Espero volvernos a ver algun dia. Tu nieta que te ama. Tatyana prada',
         titulo: 'Recuerdos de Niñez y Amor Eterno'
     },
     {
         img: '/imgmensajes/a3.jpeg',
-        name: 'Carmen Margarita oliva sernaque (hija)',
+        name: 'Carmen Margarita Oliva Sernaque (hija)',
         remember: 'Hoy quiero decir bien ¡feliz cumpleaños hasta el cielo, mamá! Te echo de menos y hoy pienso en ti más que cualquier día. Sé cuanto amabas celebrar, y sé lo alegre que pasabas siempre este día. Por eso, festejaremos junto a toda la familia, brindaremos por la hermosa mujer que fuiste y por todo lo que nos dejaste. Te amo.',
         titulo: 'Celebrando Tu Amor Eterno'
     }
