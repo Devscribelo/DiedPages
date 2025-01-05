@@ -110,22 +110,39 @@ export interface Mensajes{
 
 export const mensajes: Mensajes[] = [
     {
-        img: '/imgmensajes/1.jfif',
-        name: 'María López',
-        remember: 'Juan Gabriel, tus historias siempre nos hacían reír, llenando de alegría cada reunión. Recordamos cómo con una sonrisa podías transformar cualquier momento en algo especial. Aunque ya no estés físicamente con nosotros, seguimos contando tus anécdotas y sintiendo tu presencia en cada conversación. Gracias por los recuerdos inolvidables que nos regalaste.',
-        titulo: 'Historias que nunca olvidaremos'
+        img: '/imgmensajes/1.jpg',
+        name: 'Mariela Oliva V.',
+        remember: `Para la Mamá Melchora …
+        De tu nieta Mariela, 
+        Mami siempre nos decías que tenías miedo de no saber qué nos pasaría el día que te fueras. 
+        Quiero que sepas que nos ha pasado de todo, pero todo nos ha llevado a buenos caminos. 
+        Tu ausencia fue difícil, los cambios que eso conllevó también, pero sé que desde donde estés 
+        has visto nuestras luchas y sabes que hemos hecho las cosas correctas. 
+        Gracias por todo tu amor 💕.`,
+        titulo: 'Mensajes que Trascienden'
     },
     {
-        img: '/imgmensajes/2.jpg',
-        name: 'José Ramírez',
-        remember: 'Juan Gabriel, eras el alma de nuestras fiestas y un amigo que siempre sabía cómo hacer sentir a los demás queridos. Las tardes de domingo no serán lo mismo sin ti, pero en cada brindis te recordamos con cariño. Nos dejas una huella imborrable llena de momentos felices.',
-        titulo: 'Celebrando tu vida'
+        img: '/imgmensajes/2.jpeg',
+        name: 'Bruno Prada O. (Nieto)',
+        remember: 'Feliz cumpleaños mamá, quiero decir que siempre estás presente en nosotros, te amo mucho.',
+        titulo: 'Siempre en Nuestro Corazón'
     },
     {
-        img: '/imgmensajes/3.jfif',
-        name: 'Carmen González',
-        remember: 'Aunque te hayas ido, Juan Gabriel, tu generosidad y calidez siguen siendo un ejemplo para todos nosotros. Tu puerta siempre estaba abierta para quienes necesitaban un consejo o simplemente una charla. Recordamos con cariño esas largas conversaciones que nos daban paz y claridad.',
-        titulo: 'En memoria de tu sabiduría'
+        img: '/imgmensajes/3.jpeg',
+        name: 'Manuel Sernaque Braco',
+        remember: `Tu legado vive en mí y en todos los que tuvimos la suerte de conocerte.  
+        Tu amor, tus consejos y tu guía me acompañaron siempre y me acompañarán toda mi vida.  
+        Te recuerdo con amor, gratitud y admiración. Descansa en paz, querida hermana.  
+        Siempre estarás conmigo. Que Dios te bendiga y que la luz perpetua siempre brille para ti.  
+        A los familiares, gracias por todo, y a sus hijos por siempre recordarla con amor y gran cariño.  
+        Te amo. Un beso hasta el cielo, Melchora Sernaque Braco.  
+        
+        Hoy, día 5 del 2025, mi hermana Melchora Sernaque Braco cumple un año más de vida, pero Dios la recogió y nos dejó mucha tristeza, pena y dolor.  
+        Gracias a Dios, está gozando en el reino de los cielos. Para mí, tú siempre estarás viva en mi corazón, hermana.  
+        Recuerdo tu generosidad, fortaleza y amor incondicional. A pesar de las adversidades que tuviste, hermanita,  
+        supiste sacar adelante a tus hijos y a todos los que de una u otra manera pidieron tu ayuda. Allí estuviste.  
+        Me apoyaste en los momentos más difíciles de mi vida.`,
+        titulo: 'El Amor Entre Hermanos Perdura'
     },
     {
         img: '/imgmensajes/4.jfif',
