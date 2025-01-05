@@ -145,34 +145,34 @@ export const mensajes: Mensajes[] = [
         titulo: 'El Amor Entre Hermanos Perdura'
     },
     {
-        img: '/imgmensajes/4.jfif',
-        name: 'Luis Fernández',
-        remember: 'Nos cuesta aceptar que ya no estás con nosotros, pero en cada recuerdo sentimos tu presencia, Juan Gabriel. Siempre tenías una palabra amable y un gesto de cariño. Hoy, más que nunca, agradecemos todos esos momentos que compartimos contigo. La vida no será igual sin tu compañía.',
-        titulo: 'Siempre en nuestros pensamientos'
+        img: '/imgmensajes/a1.jpeg',
+        name: 'Amelia oliva S (hija)',
+        remember: 'Feliz cumpleaños hasta el cielo! Por mucho que pase el. Tiempo este doa no lo olvido porque sigues presente en mi corazón y en mis memorias, y nunca saldras de ahi. Sé que hoy, desde el cielo, tambien festejaras, y te acordás de todo los que aquí estamos manteniendo vivo tu recuerdo',
+        titulo: 'Un Cumpleaños Eterno en el Corazón'
     },
     {
-        img: '/imgmensajes/5.jfif',
-        name: 'Ana Torres',
-        remember: 'Juan Gabriel, tu amor por la vida era contagioso. Cada día que pasaba a tu lado se llenaba de aventuras y risas. Gracias por enseñarnos a vivir el presente y disfrutar cada momento como si fuera el último. Te extrañamos profundamente, pero seguimos tus enseñanzas día a día.',
-        titulo: 'Una vida llena de aventuras'
+        img: '/imgmensajes/a2.jpeg',
+        name: 'Amelia oliva S (hija)',
+        remember: 'Queria mamá melchora aun cuardo los mejores recuerdos de mi niñez junto quiero que sepas que te amo mucho nunca te olvidare y seguire luchando como tu me lo enseñastes mamita. Espero volvernos a ver algun dia. Tu nieta que te ama. Tatyana prada',
+        titulo: 'Recuerdos de Niñez y Amor Eterno'
     },
     {
-        img: '/imgmensajes/6.jpg',
-        name: 'Pedro Sánchez',
-        remember: 'Juan Gabriel, tu fortaleza ante la adversidad nos inspiró a todos. Siempre encontrabas una forma de salir adelante, y nunca perdiste tu espíritu optimista. Hoy te recordamos como un ejemplo de perseverancia y coraje, y seguimos tu ejemplo en los momentos difíciles.',
-        titulo: 'Ejemplo de valentía'
+        img: '/imgmensajes/a3.jpeg',
+        name: 'Carmen Margarita oliva sernaque (hija)',
+        remember: 'Hoy quiero decir bien ¡feliz cumpleaños hasta el cielo, mamá! Te echo de menos y hoy pienso en ti más que cualquier día. Sé cuanto amabas celebrar, y sé lo alegre que pasabas siempre este día. Por eso, festejaremos junto a toda la familia, brindaremos por la hermosa mujer que fuiste y por todo lo que nos dejaste. Te amo.',
+        titulo: 'Celebrando Tu Amor Eterno'
     },
-    {
-        img: '/imgmensajes/7.jpeg',
-        name: 'Elena Martínez',
-        remember: 'Aunque el tiempo pase, nunca olvidaremos los momentos que compartimos con Juan Gabriel. Su sentido del humor, su bondad y su espíritu generoso dejaron una marca en cada uno de nosotros. Siempre tendrás un lugar especial en nuestros corazones.',
-        titulo: 'Un legado de amor y alegría'
-    },
-    {
-        img: '/imgmensajes/8.jpg',
-        name: 'Juan Pérez',
-        remember: 'Juan Gabriel, tu vida estuvo llena de buenos momentos, y estamos agradecidos por haber sido parte de ellos. Cada recuerdo es un tesoro que guardamos con cariño, y tu risa resuena en nuestras memorias. Te recordaremos siempre con amor y gratitud.',
-        titulo: 'Guardando tus recuerdos con amor'
-    },
+    // {
+    //     img: '/imgmensajes/7.jpeg',
+    //     name: 'Elena Martínez',
+    //     remember: 'Aunque el tiempo pase, nunca olvidaremos los momentos que compartimos con Juan Gabriel. Su sentido del humor, su bondad y su espíritu generoso dejaron una marca en cada uno de nosotros. Siempre tendrás un lugar especial en nuestros corazones.',
+    //     titulo: 'Un legado de amor y alegría'
+    // },
+    // {
+    //     img: '/imgmensajes/8.jpg',
+    //     name: 'Juan Pérez',
+    //     remember: 'Juan Gabriel, tu vida estuvo llena de buenos momentos, y estamos agradecidos por haber sido parte de ellos. Cada recuerdo es un tesoro que guardamos con cariño, y tu risa resuena en nuestras memorias. Te recordaremos siempre con amor y gratitud.',
+    //     titulo: 'Guardando tus recuerdos con amor'
+    // },
     
 ]
