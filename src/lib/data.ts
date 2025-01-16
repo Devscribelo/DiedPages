@@ -9,11 +9,19 @@ export interface Images {
 export const images: Images[] = [
     {
         description: '',
+        src: '/gallery/2.jpg'
+    },
+    {
+        description: '',
+        src: '/gallery/011.jpeg'
+    },
+    {
+        description: '',
         src: '/gallery/1.jpg'
     },
     {
         description: '',
-        src: '/gallery/2.jpg'
+        src: '/gallery/018.jpeg'
     },
     {
         description: '',
@@ -21,7 +29,7 @@ export const images: Images[] = [
     },
     {
         description: '',
-        src: '/gallery/4.jpg'
+        src: '/gallery/12.jpg'
     },
     {
         description: '',
@@ -29,7 +37,7 @@ export const images: Images[] = [
     },
     {
         description: '',
-        src: '/gallery/6.jpg'
+        src: '/gallery/019.jpg'
     },
     {
         description: '',
@@ -53,7 +61,7 @@ export const images: Images[] = [
     },
     {
         description: '',
-        src: '/gallery/12.jpg'
+        src: '/gallery/6.jpg'
     },
     {
         description: '',
@@ -65,7 +73,7 @@ export const images: Images[] = [
     },
     {
         description: '',
-        src: '/gallery/15.jpg'
+        src: '/gallery/021.jpg'
     },
     {
         description: '',
@@ -74,6 +82,14 @@ export const images: Images[] = [
     {
         description: '',
         src: '/gallery/17.jpg'
+    },
+    {
+        description: '',
+        src: '/gallery/022.jpg'
+    },
+    {
+        description: '',
+        src: '/gallery/023.jpg'
     },
 ]
 
