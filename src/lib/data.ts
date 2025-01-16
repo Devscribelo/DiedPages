@@ -9,47 +9,39 @@ export interface Images {
 export const images: Images[] = [
     {
         description: '',
-        src: '/gallery/2.jpg'
+        src: '/gallery/01.jpg'
     },
     {
         description: '',
-        src: '/gallery/011.jpeg'
+        src: '/gallery/02.jpeg'
     },
     {
         description: '',
-        src: '/gallery/1.jpg'
+        src: '/gallery/03.jpeg'
     },
     {
         description: '',
-        src: '/gallery/018.jpeg'
+        src: '/gallery/04.jpg'
     },
     {
         description: '',
-        src: '/gallery/3.jpg'
+        src: '/gallery/05.jpg'
     },
     {
         description: '',
-        src: '/gallery/12.jpg'
+        src: '/gallery/06.jpg'
     },
     {
         description: '',
-        src: '/gallery/5.jpg'
+        src: '/gallery/07.jpg'
     },
     {
         description: '',
-        src: '/gallery/019.jpg'
+        src: '/gallery/08.jpg'
     },
     {
         description: '',
-        src: '/gallery/7.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/8.jpg'
-    },
-    {
-        description: '',
-        src: '/gallery/9.jpg'
+        src: '/gallery/09.jpg'
     },
     {
         description: '',
@@ -61,7 +53,7 @@ export const images: Images[] = [
     },
     {
         description: '',
-        src: '/gallery/6.jpg'
+        src: '/gallery/12.jpg'
     },
     {
         description: '',
@@ -73,7 +65,7 @@ export const images: Images[] = [
     },
     {
         description: '',
-        src: '/gallery/021.jpg'
+        src: '/gallery/15.jpg'
     },
     {
         description: '',
@@ -85,12 +77,17 @@ export const images: Images[] = [
     },
     {
         description: '',
-        src: '/gallery/022.jpg'
+        src: '/gallery/18.jpg'
     },
     {
         description: '',
-        src: '/gallery/023.jpg'
+        src: '/gallery/19.jpg'
     },
+    {
+        description: '',
+        src: '/gallery/20.jpg'
+    },
+    
 ]
 
 export interface Videos{
